@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios'
+import Navbar from './components/navbar/nabar';
+import NavbarTop from './components/navbar/navbartop';
 
 
 function App() {
-
-
-
-
-
 
 
   const [data, setData] = useState([{}]);
@@ -33,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavbarTop />
       <header className="App-header">
 
       </header>
