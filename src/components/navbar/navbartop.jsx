@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { TiWeatherSunny } from 'react-icons/ti'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { FaInstagramSquare } from 'react-icons/fa'
 import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs'
-
-
+import { UserContext } from '../../App'
+import { motion } from "framer-motion";
 
 const NavbarTop = () => {
 
+    const data = useContext(UserContext);
+
+
+
     const [date, setDate] = useState();
     const [day, setDay] = useState('');
+    const [index, setIndex] = useState(0)
 
     const getDate = () => {
         const dayandTime = new Date();
@@ -24,6 +29,17 @@ const NavbarTop = () => {
     }, [])
 
 
+    useEffect(() => {
+        setInterval(() => {
+            (index === data.length - 1) ?
+                setIndex(0)
+                :
+                setIndex(index + 1)
+        }, 50000);
+    },)
+
+  
+    
 
     const icons = [
         {
@@ -33,19 +49,19 @@ const NavbarTop = () => {
             item: <BsTwitter size={22} className='bg-cyan-600 text-white p-1 rounded-full cursor-pointer' />
         },
         {
-            item: <FaInstagramSquare  size={22} className='bg-fuchsia-600 text-white p-1 rounded-full cursor-pointer' />
+            item: <FaInstagramSquare size={22} className='bg-fuchsia-600 text-white p-1 rounded-full cursor-pointer' />
         },
         {
-            item: <BsYoutube size={22} className='bg-red-500 text-white p-1 rounded-full cursor-pointer'/>
+            item: <BsYoutube size={22} className='bg-red-500 text-white p-1 rounded-full cursor-pointer' />
         },
     ]
 
-  
+
 
     return (
-        <div className='absolute h-10 md:px-20 w-full top-0 border-b-2 shadow-md flex flex-row justify-around items-center text-xs overflow-hidden'>
-            <div className='mx-2 flex justify-between items-center text-[#393939]'>
-                <p className='flex mx-1'>
+        <div className='absolute h-12  md:h-10 md:px-4 w-full top-0 border-b-1 shadow-md flex flex-row md:justify-around justify-between items-center text-xs overflow-hidden'>
+            <div className='md:mx-2 flex justify-between items-center text-[#393939]'>
+                <p className='hidden md:flex md:mx-1'>
                     <span className='px-1 pt-0.5'>
                         <TiWeatherSunny />
                     </span>
@@ -57,12 +73,12 @@ const NavbarTop = () => {
                     </span>
                 </p>
 
-                <p className='flex mx-4'>
+                <p className='hidden md:flex md:mx-4'>
                     <span className='px-1 pt-0.5'>
                         <AiOutlineClockCircle />
                     </span>
-                    <span>
-                        {day} ,
+                    <span className='px-1'>
+                        {day}
                     </span>
                     <span>
                         {date}
@@ -71,19 +87,22 @@ const NavbarTop = () => {
 
 
                 <div className='breakingNews flex justify-between items-center'>
-                    <h1 className='bg-red-500 h-10 text-white p-3'>
+                    <h1 className='bg-red-500 h-12 md:h-10 text-white p-3'>
                         Breaking News
                     </h1>
-                    <p className='px-1'>
-                        Lorem ipsum dolor sit amet consectetur
-                    </p>
+                    <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{
+                        duration: '0.5',
+                        delay: '0.5'
+                    }} className='px-1 truncate max-w-[250px] md:max-w-[350px]' key={index}>
+                        {(data[index].description)}
+                    </motion.h4>
 
                 </div>
             </div>
 
             <div className='icons flex justify-between gap-2 items-center mx-15'>
-                {icons.map(({item, index}) => (
-                    <div key={index}>
+                {icons.map(({ item, index }) => (
+                    <div key={index} className='icon'>
                         {item}
                     </div>
 

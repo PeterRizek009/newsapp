@@ -1,14 +1,19 @@
 import React from 'react';
-import NavbarTop from './navbartop';
+import { Link } from 'react-router-dom';
 
 
 
-const Navbar = () => {
+const NavbarBottom = () => {
+
+    const links =  ['Home' , 'International' , 'Sports' , 'Business']
     return (
         <>
-            <NavbarTop />
+         <nav className="navbar flex h-18 items-center justify-between  bg-[#393939] mt-5">
+   
+         </nav>
+           
         </>
     );
 }
 
-export default Navbar;
+export default NavbarBottom;
