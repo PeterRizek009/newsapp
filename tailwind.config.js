@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily : {
+        oswald : ['Oswald', 'sans-serif']
+      
+      },
+      grayscale: {
+        50: '50%',
+      }
+    },
   },
   plugins: [],
 }

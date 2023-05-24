@@ -1,0 +1,45 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Headlines = ({ data }) => {
+
+
+    const renderHeadline = (index) => {
+        return (
+            <div className='absolute bottom-[5%]  flex flex-col items-start  px-8 text-red-500'>
+                <div className='flex justify-between text-sm md:text-lg py-3'>
+                    <h1>
+                        {data[index].author}
+                    </h1>
+                </div>
+                <Link to={data[index].url}>
+                    <h2 className='text-md text-white md:text-xl cursor-pointer hover:underline'>{data[index].title}</h2>
+                </Link>
+            </div>
+        )
+    }
+
+
+    return (
+
+        <section className='grid grid-cols-2 grid-rows-3 md:grid-cols-4 md:grid-rows-2 py-4  gap-2 md:w-[1200px] md:mx-auto h-[570px]'>
+
+            <div className='relative col-span-2 row-span-1 md:row-span-2 bg-cover' style={{ backgroundImage: `url(${data[0].urlToImage})` }}>
+                {renderHeadline(0)}
+            </div>
+            <div className='relative col-span-1 row-span-1 bg-cover bg-blend-darken' style={{ backgroundImage: `url(${data[1].urlToImage})` }}>
+                {renderHeadline(1)}
+            </div>
+            <div className='relative col-span-1 row-span-1 bg-cover' style={{ backgroundImage: `url(${data[4].urlToImage})` }}>
+                {renderHeadline(4)}
+            </div>
+
+            <div className='relative col-span-2 row-span-1 md:row-span-1 bg-cover' style={{ backgroundImage: `url(${data[3].urlToImage})` }}>
+                {renderHeadline(3)}
+            </div>
+        </section>
+
+    );
+}
+
+export default Headlines;

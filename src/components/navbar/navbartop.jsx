@@ -38,8 +38,8 @@ const NavbarTop = () => {
         }, 50000);
     },)
 
-  
-    
+
+
 
     const icons = [
         {
@@ -59,7 +59,7 @@ const NavbarTop = () => {
 
 
     return (
-        <div className='absolute h-12  md:h-10 md:px-4 w-full top-0 border-b-1 shadow-md flex flex-row md:justify-around justify-between items-center text-xs overflow-hidden'>
+        <div className='absolute w-full h-12  md:h-10 md:px-4  top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs '>
             <div className='md:mx-2 flex justify-between items-center text-[#393939]'>
                 <p className='hidden md:flex md:mx-1'>
                     <span className='px-1 pt-0.5'>
@@ -73,7 +73,7 @@ const NavbarTop = () => {
                     </span>
                 </p>
 
-                <p className='hidden md:flex md:mx-4'>
+                <p className='hidden w-[150px] md:flex md:mx-1'>
                     <span className='px-1 pt-0.5'>
                         <AiOutlineClockCircle />
                     </span>
@@ -87,7 +87,7 @@ const NavbarTop = () => {
 
 
                 <div className='breakingNews flex justify-between items-center'>
-                    <h1 className='bg-red-500 h-12 md:h-10 text-white p-3'>
+                    <h1 className='bg-red-500  w-[90px] h-12 md:h-10 text-white p-3'>
                         Breaking News
                     </h1>
                     <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{
