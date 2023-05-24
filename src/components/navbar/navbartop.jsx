@@ -93,7 +93,7 @@ const NavbarTop = () => {
                     <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{
                         duration: '0.5',
                         delay: '0.5'
-                    }} className='px-1 truncate max-w-[250px] md:max-w-[350px]' key={index}>
+                    }} className='px-1 truncate w-[250px] md:w-[350px]' key={index}>
                         {(data[index].description)}
                     </motion.h4>
 
