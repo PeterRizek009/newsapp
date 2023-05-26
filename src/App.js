@@ -22,8 +22,6 @@ function App() {
   }
   const [data, setData] = useState([{ dataNews }]);
 
-  const [appleNews, setAppleNews] = useState([]);
-
   const getData = async () => {
     await axios.get('https://newsapi.org/v2/everything?q=apple&from=2023-05-23&to=2023-05-23&sortBy=popularity&apiKey=44b96171e1c847c393bfbe612db4133e')
 
@@ -33,18 +31,11 @@ function App() {
       .catch((err) => console.log(err));
   }
 
-  const getAppleNews = async () => {
-    await axios.get('https://newsapi.org/v2/everything?q=apple&from=2023-05-23&to=2023-05-23&sortBy=popularity&apiKey=44b96171e1c847c393bfbe612db4133e')
 
-      .then((response) => {
-        setAppleNews(response.data.articles)
-      })
-      .catch((err) => console.log(err));
-  }
 
   useEffect(() => {
     getData()
-    getAppleNews()
+
   }, [])
 
 
@@ -69,7 +60,7 @@ function App() {
         {showComponent &&
           <>
             <Headlines data={data} />
-            <DontMiss appleNews={appleNews}/>
+            <DontMiss />
           </>
         }
 

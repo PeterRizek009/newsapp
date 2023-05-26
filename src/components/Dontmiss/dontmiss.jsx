@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../App'
+import { Link } from 'react-router-dom';
 
 const DontMiss = () => {
 
@@ -15,7 +16,9 @@ const DontMiss = () => {
                         </div>
                         <div>
                             <h1 className='m-2 text-xs'>{item.author}</h1>
+                            <Link to={item.url}>
                             <h1 className='m-2 text-md text-neutral-500'>{item.title}</h1>
+                            </Link>
                         </div>
                     </div>
              
