@@ -42,28 +42,21 @@ const NavbarTop = () => {
 
 
     const icons = [
-        {
-            id: 0,
-            item: <BsFacebook size={22} className='bg-blue-600 text-white p-1 rounded-full cursor-pointer' />
-        },
-        {
-            id: 1,
-            item: <BsTwitter size={22} className='bg-cyan-600 text-white p-1 rounded-full cursor-pointer' />
-        },
-        {
-            id: 2,
-            item: <FaInstagramSquare size={22} className='bg-fuchsia-600 text-white p-1 rounded-full cursor-pointer' />
-        },
-        {
-            id: 3,
-            item: <BsYoutube size={22} className='bg-red-500 text-white p-1 rounded-full cursor-pointer' />
-        },
+        <BsFacebook size={22} className='bg-blue-600 text-white p-1 rounded-full cursor-pointer' />
+        ,
+        <BsTwitter size={22} className='bg-cyan-600 text-white p-1 rounded-full cursor-pointer' />
+        ,
+        <FaInstagramSquare size={22} className='bg-fuchsia-600 text-white p-1 rounded-full cursor-pointer' />
+        ,
+        <BsYoutube size={22} className='bg-red-500 text-white p-1 rounded-full cursor-pointer' />
     ]
 
 
 
+
+
     return (
-        <div className='absolute w-full h-12  md:h-10 md:px-4  top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs '>
+        <div className='absolute w-full md:min-w-[1200px]  h-12  md:h-10 md:px-4  top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs '>
             <div className='md:mx-2 flex justify-between items-center text-[#393939]'>
                 <p className='hidden md:flex md:mx-1'>
                     <span className='px-1 pt-0.5'>
@@ -104,12 +97,11 @@ const NavbarTop = () => {
                 </div>
             </div>
 
-            <div className='icons flex justify-between gap-2 items-center mx-15'>
-                {icons.map(({ item, id }) => (
-                    <div key={id} className='icon'>
+            <div className='icons flex justify-between gap-2'>
+                {icons.map(({ item, index }) => (
+                    <div key={index} className='icon'>
                         {item}
                     </div>
-
                 )
                 )}
             </div>

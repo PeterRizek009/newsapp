@@ -10,8 +10,8 @@ const DontMiss = () => {
 
     const renderDontMiss = () => {
         return (
-            (data.slice(7, 12)).map((item) => (
-                    <div className='row-span-1  flex flex-row items-start py-2' key={item.author}>
+            (data.slice(7, 12)).map((item , index) => (
+                    <div className='row-span-1  flex flex-row items-start py-2' key={index}>
                         <div className='w-[90px] h-[70px] p-2 bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                         </div>
                         <div>
