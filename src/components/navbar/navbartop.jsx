@@ -43,15 +43,19 @@ const NavbarTop = () => {
 
     const icons = [
         {
+            id: 0,
             item: <BsFacebook size={22} className='bg-blue-600 text-white p-1 rounded-full cursor-pointer' />
         },
         {
+            id: 1,
             item: <BsTwitter size={22} className='bg-cyan-600 text-white p-1 rounded-full cursor-pointer' />
         },
         {
+            id: 2,
             item: <FaInstagramSquare size={22} className='bg-fuchsia-600 text-white p-1 rounded-full cursor-pointer' />
         },
         {
+            id: 3,
             item: <BsYoutube size={22} className='bg-red-500 text-white p-1 rounded-full cursor-pointer' />
         },
     ]
@@ -101,8 +105,8 @@ const NavbarTop = () => {
             </div>
 
             <div className='icons flex justify-between gap-2 items-center mx-15'>
-                {icons.map(({ item, index }) => (
-                    <div key={index} className='icon'>
+                {icons.map(({ item, id }) => (
+                    <div key={id} className='icon'>
                         {item}
                     </div>
 
