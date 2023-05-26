@@ -4,7 +4,7 @@ import { Divide as Hamburger } from "hamburger-react"
 
 const NavbarBottom = () => {
 
-    const links = ['Home', 'International', 'Sports', 'Business']
+    // const links = ['Home', 'International', 'Sports', 'Business']
 
     const [active, setActive] = useState(false);
 

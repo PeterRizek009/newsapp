@@ -2,9 +2,9 @@ import { useEffect, useState, createContext } from 'react';
 import './App.css';
 import axios from 'axios'
 import Navbar from './components/navbar/navbar';
-
 import Headlines from './components/headline/headline';
 import DontMiss from './components/Dontmiss/dontmiss';
+import TabContainer from './components/tabs/tabs';
 
 
 export const UserContext = createContext()
@@ -66,6 +66,7 @@ function App() {
 
       </UserContext.Provider>
 
+       
     </div>
   );
 }

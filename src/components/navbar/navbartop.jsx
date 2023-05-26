@@ -40,15 +40,20 @@ const NavbarTop = () => {
 
 
 
-
     const icons = [
-        <BsFacebook size={22} className='bg-blue-600 text-white p-1 rounded-full cursor-pointer' />
-        ,
-        <BsTwitter size={22} className='bg-cyan-600 text-white p-1 rounded-full cursor-pointer' />
-        ,
-        <FaInstagramSquare size={22} className='bg-fuchsia-600 text-white p-1 rounded-full cursor-pointer' />
-        ,
-        <BsYoutube size={22} className='bg-red-500 text-white p-1 rounded-full cursor-pointer' />
+        {
+           item : <BsFacebook size={22} className='bg-blue-600 text-white p-1 rounded-full cursor-pointer' />
+        },
+        {
+            item : <BsTwitter size={22} className='bg-cyan-600 text-white p-1 rounded-full cursor-pointer' />
+        },
+        {
+            item : <FaInstagramSquare size={22} className='bg-fuchsia-600 text-white p-1 rounded-full cursor-pointer' />
+        },
+        {
+            item : <BsYoutube size={22} className='bg-red-500 text-white p-1 rounded-full cursor-pointer' />
+        }
+        
     ]
 
 
@@ -56,8 +61,8 @@ const NavbarTop = () => {
 
 
     return (
-        <div className='absolute w-full md:min-w-[1200px]  h-12  md:h-10 md:px-4  top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs '>
-            <div className='md:mx-2 flex justify-between items-center text-[#393939]'>
+        <div className='absolute w-full md:min-w-[1200px]  h-12  md:h-10 md:px-4  top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs bg-black text-white'>
+            <div className='md:mx-2 flex justify-between items-center '>
                 <p className='hidden md:flex md:mx-1'>
                     <span className='px-1 pt-0.5'>
                         <TiWeatherSunny />
@@ -97,9 +102,9 @@ const NavbarTop = () => {
                 </div>
             </div>
 
-            <div className='icons flex justify-between gap-2'>
+            <div className='icons flex justify-between gap-2 md:mr-36'>
                 {icons.map(({ item, index }) => (
-                    <div key={index} className='icon'>
+                    <div key={index} className='block icon'>
                         {item}
                     </div>
                 )
