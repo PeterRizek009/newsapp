@@ -2,16 +2,23 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Divide as Hamburger } from "hamburger-react"
 
+
+
 const NavbarBottom = () => {
 
-    // const links = ['Home', 'International', 'Sports', 'Business']
+    
 
     const [active, setActive] = useState(false);
 
+    
 
     const showMenu = () => {
         setActive(!active)
     }
+
+    const links = ['Home', 'International', 'Sports', 'Business']
+
+
     return (
         <>
             <nav className="flex justify-between md:justify-start items-center mt-0 mx-auto md:mt-0 py-2 h-16 w-full md:w-[1200px]  bg-[#393939]">
@@ -24,23 +31,13 @@ const NavbarBottom = () => {
                 </div>
 
 
-                <ul className={active ? "absolute mx-auto top-[9.8rem] z-50 bg- w-full bg-[#393939] md:flex justify-between items-center p-3  space-y-4" : "hidden md:flex mx-5"}>
-                    <li className="nav-item ">
-                        <Link className="nav-link" aria-current="page" to={"/"}>Home</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="solutions">International</Link>
-                    </li>
-
-                    <li className="nav-item">
-                        <Link className="nav-link" to="projects">Sports</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="aboutus">Business</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="aboutus">Contact us</Link>
-                    </li>
+                <ul  className={active === true ? "absolute mx-auto h-[200px] top-[9.9rem] z-50 bg- w-full bg-[#393939] md:flex justify-between items-center p-3  space-y-4" : "hidden md:flex mx-5"}>
+                    {links.map((link) => (
+                        <li
+                            className="nav-item ">
+                            <Link className="nav-link" aria-current="page" to={`/${link}`}>{link}</Link>
+                        </li>
+                    ))}
                 </ul>
 
 

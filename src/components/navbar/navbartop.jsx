@@ -11,7 +11,6 @@ const NavbarTop = () => {
     const data = useContext(UserContext);
 
 
-
     const [date, setDate] = useState();
     const [day, setDay] = useState('');
     const [index, setIndex] = useState(0)
