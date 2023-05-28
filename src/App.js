@@ -4,7 +4,6 @@ import axios from 'axios'
 import Navbar from './components/navbar/navbar';
 import Headlines from './components/headline/headline';
 import DontMiss from './components/Dontmiss/dontmiss';
-import TabContainer from './components/tabs/tabs';
 
 
 export const UserContext = createContext()
@@ -23,7 +22,7 @@ function App() {
   const [data, setData] = useState([{ dataNews }]);
 
   const getData = async () => {
-    await axios.get('https://newsapi.org/v2/everything?q=apple&from=2023-05-23&to=2023-05-23&sortBy=popularity&apiKey=44b96171e1c847c393bfbe612db4133e')
+    await axios.get('https://newsapi.org/v2/everything?q=apple&from=2023-05-28&to=2023-05-23&sortBy=popularity&apiKey=44b96171e1c847c393bfbe612db4133e')
 
       .then((response) => {
         setData(response.data.articles)
