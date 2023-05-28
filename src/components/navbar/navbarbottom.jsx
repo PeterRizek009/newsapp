@@ -31,10 +31,10 @@ const NavbarBottom = () => {
                 </div>
 
 
-                <ul  className={active === true ? "absolute mx-auto h-[200px] top-[9.9rem] z-50 bg- w-full bg-[#393939] md:flex justify-between items-center p-3  space-y-4" : "hidden md:flex mx-5"}>
-                    {links.map((link) => (
+                <ul  className={active === true ? "absolute mx-auto h-[300px] top-[9.9rem] z-50  w-full bg-[#393939] flex flex-col justify-start  p-3 space-y-4" : "hidden md:flex mx-5"}>
+                    {links.map((link ,index) => (
                         <li
-                            className="nav-item ">
+                            className="nav-item" key={index}>
                             <Link className="nav-link" aria-current="page" to={`/${link}`}>{link}</Link>
                         </li>
                     ))}

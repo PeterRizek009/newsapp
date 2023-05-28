@@ -6,26 +6,20 @@ import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs'
 import { UserContext } from '../../App'
 import { motion } from "framer-motion";
 
-const NavbarTop = () => {
+const NavbarTop = ({day , date}) => {
 
     const data = useContext(UserContext);
 
 
-    const [date, setDate] = useState();
-    const [day, setDay] = useState('');
+  
+  
     const [index, setIndex] = useState(0)
 
-    const getDate = () => {
-        const dayandTime = new Date();
-        setDate(dayandTime.toISOString().slice(0, 10));
-        setDay(dayandTime.toLocaleString('en-us', { weekday: 'long' }));
-    }
+  
 
 
 
-    useEffect(() => {
-        getDate();
-    }, [])
+ 
 
 
     useEffect(() => {
@@ -93,8 +87,8 @@ const NavbarTop = () => {
                     </h1>
                     <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{
                         duration: '0.5',
-                        delay: '0.5'
-                    }} className='px-1 truncate w-[250px] md:w-[350px]' key={index}>
+                        delay: '0.8'
+                    }} className='px-1 truncate w-[250px] md:w-[350px]'>
                         {(data[index].description)}
                     </motion.h4>
 
@@ -103,7 +97,7 @@ const NavbarTop = () => {
 
             <div className='icons flex justify-between gap-2 md:mr-36'>
                 {icons.map(({ item, index }) => (
-                    <div key={index} className='block icon'>
+                    <div  className='block icon' key={index}>
                         {item}
                     </div>
                 )

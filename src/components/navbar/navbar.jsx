@@ -4,10 +4,10 @@ import NavMiddlle from './navmiddle';
 import NavbarBottom from './navbarbottom';
 
 
-const Navbar = () => {
+const Navbar = ({date , day}) => {
     return ( 
         <div className='top-0 min-w-full flex flex-col justify-between'>
-        <NavbarTop/>
+        <NavbarTop day={day} date={date}/>
         <NavMiddlle/>
         <NavbarBottom/>
         </div>

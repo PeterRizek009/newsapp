@@ -28,8 +28,8 @@ const DontMiss = () => {
 
     return (
         <div className='md:w-[1200px] md:mx-auto'>
-            <h1 className='text-red-500 text-2xl py-3 border-b-2 w-full border-black'>Don't Miss</h1>
-            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto h-[570px]'>
+            <h1 className='text-red-500 text-2xl p-2 border-b-2 w-full border-black'>Don't Miss</h1>
+            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto md:h-[570px]'>
                 <div className='col-span-1'>
                     <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[6].urlToImage})` }}>
                     </div>
@@ -38,7 +38,9 @@ const DontMiss = () => {
                             <h1 className='mx-1'>{data[6].author}</h1>
                             <h1>{data[6].publishedAt}</h1>
                         </div>
-                        <h1 className='m-2'>{data[6].title}</h1>
+                        <Link to={data[6].url}>
+                            <h1 className='m-2'>{data[6].title}</h1>
+                        </Link>
                         <p className='m-2  text-md text-neutral-400'>{data[6].content}</p>
                     </div>
                 </div>
@@ -49,7 +51,7 @@ const DontMiss = () => {
 
 
                 <div className='col-span-1 flex flex-col justify-start'>
-                     <TabContainer data={data}/>    
+                    <TabContainer data={data} />
                 </div>
 
 

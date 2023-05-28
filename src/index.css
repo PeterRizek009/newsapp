@@ -4,5 +4,5 @@
 
 
 .nav-link{
-    @apply  hover:bg-red-500 cursor-pointer  p-5 text-white;
+    @apply  hover:bg-red-500 cursor-pointer md:p-5 p-2 my-2 md:m-0 text-white;
 }
