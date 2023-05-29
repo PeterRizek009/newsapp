@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState, createContext } from 'react';
 import './App.css';
 import axios from 'axios'
@@ -8,7 +9,6 @@ import Entertainment from './components/entertainment/Entertainment';
 
 
 export const UserContext = createContext()
-
 
 function App() {
 
@@ -21,18 +21,25 @@ function App() {
     'urlToImage': '',
   }
   const [data, setData] = useState([{ dataNews }]);
+
   const [date, setDate] = useState();
+
   const [day, setDay] = useState('');
+
+  // const lastWeek = '2023-05-26';
 
   const getDate = () => {
     const dayandTime = new Date();
     setDate(dayandTime.toISOString().slice(0, 10));
     setDay(dayandTime.toLocaleString('en-us', { weekday: 'long' }));
   }
+  
 
+  const request = 'https://newsapi.org/v2/everything?q=apple&from=2023-05-26&to=2023-05-29&sortBy=popularity&apiKey=b15ae682b7ef499a89e9b4c9302f4d83' ;
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getData = async () => {
-    await axios.get(`https://newsapi.org/v2/everything?q=apple&from=2023-05-25&to=${date}&sortBy=popularity&apiKey=44b96171e1c847c393bfbe612db4133e`)
+    await axios.get(request)
 
       .then((response) => {
         setData(response.data.articles)
@@ -53,7 +60,7 @@ function App() {
     return () => clearTimeout(timeoutId);
 
 
-  }, )
+  }, [])
 
 
   const [showComponent, setShowComponent] = useState(false);
@@ -69,17 +76,19 @@ function App() {
   }, []);
 
 
+
+
   return (
-    <div className="App font-oswald">
+    <div className="App font-oswald bg-gray-50 box-border">
       <UserContext.Provider value={data}>
         <Navbar date={date} day={day} />
-        {showComponent &&
+         {showComponent &&
           <div className='flex flex-col justify-start '>
             <Headlines data={data} />
             <DontMiss />
             <Entertainment />
           </div>
-        }
+        } 
 
       </UserContext.Provider>
 
