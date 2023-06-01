@@ -21,7 +21,8 @@ function App() {
   //   'publishedAt': '',
   //   'urlToImage': '',
   // }
-  const data = useState(articles);
+  // eslint-disable-next-line no-unused-vars
+  const [data, setData] = useState(articles);
 
   const [date, setDate] = useState();
 
@@ -36,7 +37,7 @@ function App() {
   }
 
 
-  console.log(articles);
+
   //const request = 'https://newsapi.org/v2/everything?q=apple&from=2023-05-27&to=2023-06-1&sortBy=popularity&apiKey=b15ae682b7ef499a89e9b4c9302f4d83';
 
   // // eslint-disable-next-line react-hooks/exhaustive-deps
