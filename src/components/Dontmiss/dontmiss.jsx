@@ -7,6 +7,7 @@ const DontMiss = () => {
 
     const data = useContext(UserContext);
 
+    console.log(data);
     const renderDontMiss = () => {
         return (
             (data.slice(25, 30)).map((item, index) => (

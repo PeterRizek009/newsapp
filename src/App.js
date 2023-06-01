@@ -21,7 +21,7 @@ function App() {
   //   'publishedAt': '',
   //   'urlToImage': '',
   // }
-  const [data, setData] = useState(articles);
+  const data = useState(articles);
 
   const [date, setDate] = useState();
 
