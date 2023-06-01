@@ -51,7 +51,7 @@ const NavbarTop = ({ day, date }) => {
 
 
     return (
-        <div className='absolute w-full md:min-w-[1200px]  h-12  md:h-10 md:px-4  top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs bg-white text-black'>
+        <div className='absolute w-full md:min-w-[1200px] h-12 md:h-10 md:px-4  top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs bg-white text-black'>
             <div className='md:mx-2 flex justify-between items-center '>
                 <p className='hidden md:flex md:mx-1'>
                     <span className='px-1 pt-0.5'>
@@ -85,7 +85,7 @@ const NavbarTop = ({ day, date }) => {
                     <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{
                         duration: '0.7',
                         delay: '1'
-                    }} className='px-1 truncate w-[250px] md:w-[350px]'>
+                    }} className='px-1 truncate w-[160px] md:w-[350px]'>
                         {(data[index].description)}
                     </motion.h4>
 

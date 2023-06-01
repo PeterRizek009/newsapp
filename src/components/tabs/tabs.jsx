@@ -32,7 +32,7 @@ const TabContainer = ({ data }) => {
                     "flex-1 border-b-2 border-red-500 transition-all duration-500 ease-in-out transform hover:-translate-y-0.4 hover:shadow-lg"
                     : "flex-1 border-b-2 border-gray-950 shadow-sm"} key={index}>
                     <div className="relative block p-2">
-                        <div className="flex items-center justify-center gap-4">
+                        <div className="flex items-center justify-center gap-2 md:gap-4">
                             <span className={toggleTab === index ?
                                 "text-red-500 text-sm"
                                 : " text-sm text-gray-900 cursor-pointer"} onClick={() => setToggleTab(index)}> {item.name} </span>
@@ -66,7 +66,7 @@ const TabContainer = ({ data }) => {
     }
 
     return (
-        <div className='block '>
+        <div className='block max-w-[380px] md:w-full'>
             <ul className="flex ">
                 {renderHeader()}
             </ul>
