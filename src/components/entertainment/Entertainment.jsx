@@ -48,7 +48,7 @@ const Entertainment = () => {
                     <div className='p-1 ml-32'>
                         <h1 className='text-xs text-neutral-500'>{item.author}</h1>
                         <Link to={item.url}>
-                            <p className='text-sm w-3/4'>{item.title}</p>
+                            <p className='text-sm w-full'>{item.title}</p>
                         </Link>
                     </div>
                 </div >
