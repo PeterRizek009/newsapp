@@ -40,9 +40,8 @@ const Entertainment = () => {
     const renderSlide = () => {
         return (
             (slider).map((item) => (
-                <div className={item.id === index ? 'items min-w-[300px] md:w-full border-2 rounded-md border-red-500  delay-400'
-                    : 'items'} key={item.id}>
-
+                <div className={item.id === index ? 'items border-red-500 transition-all duration-300 ease-in-out'
+                    : 'items border-gray-100'} key={item.id}>
                     <div className='absolute w-[120px] h-[80px] my-auto md:h-[90px] bg-cover bg-center block mx-1 inset-0' style={{ backgroundImage: `url(${item.image})` }}></div>
 
 

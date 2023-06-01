@@ -8,6 +8,6 @@
 }
 
 .items{
-    @apply relative h-[100px]  md:w-full w-[450px]  flex justify-between items-center mx-1 my-1 md:my-0;
+    @apply relative h-[100px]  max-w-[350px] md:w-full  flex justify-between items-center mx-1 my-1 md:my-0  border-2 rounded-md;
 }
 
