@@ -66,7 +66,7 @@ const TabContainer = ({ data }) => {
     }
 
     return (
-        <div className='block max-w-[380px] md:w-full'>
+        <div className='block min-w-[300px] md:w-full'>
             <ul className="flex ">
                 {renderHeader()}
             </ul>

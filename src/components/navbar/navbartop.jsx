@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { TiWeatherSunny } from 'react-icons/ti'
 import { AiOutlineClockCircle } from 'react-icons/ai'
-import { FaInstagramSquare } from 'react-icons/fa'
-import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs'
+
 import { UserContext } from '../../App'
 import { motion } from "framer-motion";
 
-const NavbarTop = ({ day, date }) => {
+const NavbarTop = ({ day, date , icons}) => {
 
     const data = useContext(UserContext);
 
@@ -30,22 +29,7 @@ const NavbarTop = ({ day, date }) => {
 
 
 
-    const icons = [
-        {
-            item: <BsFacebook size={22} className='bg-blue-600 text-white p-1 rounded-full cursor-pointer' />
-        },
-        {
-            item: <BsTwitter size={22} className='bg-cyan-600 text-white p-1 rounded-full cursor-pointer' />
-        },
-        {
-            item: <FaInstagramSquare size={22} className='bg-fuchsia-600 text-white p-1 rounded-full cursor-pointer' />
-        },
-        {
-            item: <BsYoutube size={22} className='bg-red-500 text-white p-1 rounded-full cursor-pointer' />
-        }
-
-    ]
-
+  
 
 
 
@@ -85,14 +69,14 @@ const NavbarTop = ({ day, date }) => {
                     <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{
                         duration: '0.7',
                         delay: '1'
-                    }} className='px-1 truncate w-[160px] md:w-[350px]'>
+                    }} className='px-1 truncate w-[310px] md:w-[350px]'>
                         {(data[index].description)}
                     </motion.h4>
 
                 </div>
             </div>
 
-            <div className='icons flex justify-between gap-2 md:mr-36'>
+            <div className='icons hidden md:flex justify-between gap-2 '>
                 {icons.map(({ item, index }) => (
                     <div className='block icon' key={index}>
                         {item}

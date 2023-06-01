@@ -4,13 +4,13 @@ import { Divide as Hamburger } from "hamburger-react"
 
 
 
-const NavbarBottom = () => {
+const NavbarBottom = ({icons}) => {
 
-    
+
 
     const [active, setActive] = useState(false);
 
-    
+
 
     const showMenu = () => {
         setActive(!active)
@@ -31,13 +31,24 @@ const NavbarBottom = () => {
                 </div>
 
 
-                <ul  className={active === true ? "absolute mx-auto h-[300px] top-[9.9rem] z-50  w-full bg-[#393939] flex flex-col justify-start  p-3 space-y-4" : "hidden md:flex mx-5"}>
-                    {links.map((link ,index) => (
+                <ul className={active === true ? "absolute mx-auto h-[300px] top-[9.9rem] z-50  w-full bg-[#393939] flex flex-col justify-start  p-3 space-y-4" : "hidden md:flex mx-5"}>
+                    {links.map((link, index) => (
                         <li
                             className="nav-item" key={index}>
                             <Link className="nav-link" aria-current="page" to={`/${link}`}>{link}</Link>
                         </li>
                     ))}
+
+                    <li className='md:hidden block'>
+                        <div className='icons flex justify-start gap-4'>
+                            {icons.map(({ item, index }) => (
+                                <div className='block icon' key={index}>
+                                    {item}
+                                </div>
+                            )
+                            )}
+                        </div>
+                    </li>
                 </ul>
 
 

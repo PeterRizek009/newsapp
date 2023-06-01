@@ -13,7 +13,7 @@ const DontMiss = () => {
                 <div className='relative my-6 md:my-0 h-full flex flex-row items-start justify-between' key={index}>
                     <div className='absolute block w-[80px] h-[70px] px-2 bg-center bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
-                    <div className='w-[300px] ml-20'>
+                    <div className='min-w-[300px] ml-20'>
                         <h1 className='px-2 text-xs'>{item.author}</h1>
                         <Link to={item.url}>
                             <h1 className='px-2 text-md text-neutral-500'>{item.title}</h1>
@@ -41,7 +41,7 @@ const DontMiss = () => {
                         <Link to={data[6].url}>
                             <h1 className='m-2'>{data[6].title}</h1>
                         </Link>
-                        <p className='m-2  text-md text-neutral-400'>{data[6].content}</p>
+                        <p className='m-2 text-sm md:text-md text-neutral-400'>{data[6].content}</p>
                     </div>
                 </div>
                 <div className='col-span-1 flex flex-col mx-4 my-4 md:m-0 justify-start'>
