@@ -42,9 +42,9 @@ const Entertainment = () => {
             (slider).map((item) => (
                 <div className={item.id === index ? 'items border-2 rounded-md border-red-500  delay-400'
                     : 'items'} key={item.id}>
-               
-                        <div className='absolute w-[120px] h-[80px] my-auto md:h-[90px] bg-cover bg-center block mx-1 inset-0' style={{ backgroundImage: `url(${item.image})` }}></div>
-                       
+
+                    <div className='absolute w-[120px] h-[80px] my-auto md:h-[90px] bg-cover bg-center block mx-1 inset-0' style={{ backgroundImage: `url(${item.image})` }}></div>
+
 
                     <div className='p-1 ml-32'>
                         <h1 className='text-xs text-neutral-500'>{item.author}</h1>
@@ -75,9 +75,9 @@ const Entertainment = () => {
                     </div>
                 </div>
             </motion.div>
-            <div className='md:w-[1200px] flex flex-col justify-start'>
+            <div className='md:w-[1200px] flex flex-col justify-start' >
                 <div className='relative w-full h-[550px] object-cover bg-center block my-6 inset-0' style={{ backgroundImage: `url(${slider[index].image})` }}>
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
                     <div className='absolute bottom-[15%]  flex flex-col items-start  px-8 text-red-500'>
                         <div className='flex justify-between text-sm md:text-lg py-3'>
                             <Link to={slider[index].url}>

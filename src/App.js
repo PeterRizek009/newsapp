@@ -35,7 +35,7 @@ function App() {
   }
   
 
-  const request = 'https://newsapi.org/v2/everything?q=apple&from=2023-05-26&to=2023-05-29&sortBy=popularity&apiKey=b15ae682b7ef499a89e9b4c9302f4d83' ;
+  const request = 'https://newsapi.org/v2/everything?q=apple&from=2023-05-27&to=2023-05-31&sortBy=popularity&apiKey=b15ae682b7ef499a89e9b4c9302f4d83' ;
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getData = async () => {
