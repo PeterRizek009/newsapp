@@ -79,7 +79,7 @@ function App() {
 
 
   return (
-    <div className="App font-oswald bg-gray-50 box-border">
+    <div className="App font-opensans bg-gray-50 box-border">
       <UserContext.Provider value={data}>
         <Navbar date={date} day={day} />
          {showComponent &&

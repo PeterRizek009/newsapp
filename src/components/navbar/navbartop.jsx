@@ -79,7 +79,7 @@ const NavbarTop = ({ day, date }) => {
 
 
                 <div className='breakingNews flex justify-between items-center'>
-                    <h1 className='bg-red-500  w-[90px] h-12 md:h-10 text-white p-3'>
+                    <h1 className='bg-red-500  w-[110px] h-12 md:h-10 text-white p-3'>
                         Breaking News
                     </h1>
                     <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{

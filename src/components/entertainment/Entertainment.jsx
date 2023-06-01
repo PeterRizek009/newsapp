@@ -40,11 +40,11 @@ const Entertainment = () => {
     const renderSlide = () => {
         return (
             (slider).map((item) => (
-                <div className={item.id === index ? 'items border-4 rounded-md border-red-500  delay-200 '
+                <div className={item.id === index ? 'items border-2 rounded-md border-red-500  delay-400'
                     : 'items'} key={item.id}>
-                    <div className='absolute w-[120px] h-[80px] my-auto md:h-[90px] bg-cover bg-center block mx-2 inset-0' style={{ backgroundImage: `url(${item.image})` }}></div>
+                    <div className='absolute w-[120px] h-[80px] my-auto md:h-[90px] bg-cover bg-center block mx-1 inset-0' style={{ backgroundImage: `url(${item.image})` }}></div>
 
-                    <div className='px-2 ml-32'>
+                    <div className='p-1 ml-32'>
                         <h1 className='text-xs text-neutral-500'>{item.author}</h1>
                         <Link to={item.url}>
                             <p className='text-sm w-full md:w-3/4'>{item.title}</p>

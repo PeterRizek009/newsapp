@@ -8,5 +8,5 @@
 }
 
 .items{
-    @apply relative h-[100px]  md:w-full w-[500px]  flex justify-between items-center mx-2 my-1 md:my-0 p-1;
+    @apply relative h-[100px]  md:w-full w-[450px]  flex justify-between items-center mx-1 my-1 md:my-0;
 }
