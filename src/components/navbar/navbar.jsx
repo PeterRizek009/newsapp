@@ -5,6 +5,9 @@ import NavbarBottom from './navbarbottom';
 import { FaInstagramSquare } from 'react-icons/fa'
 import { BsFacebook, BsTwitter, BsYoutube } from 'react-icons/bs'
 
+
+
+
 const Navbar = ({ date, day }) => {
 
 
@@ -24,11 +27,16 @@ const Navbar = ({ date, day }) => {
 
     ]
 
+
+
+
     return (
         <div className='top-0 min-w-full flex flex-col justify-between'>
+
             <NavbarTop day={day} date={date} icons={icons}/>
             <NavMiddlle />
             <NavbarBottom icons={icons}/>
+
         </div>
     );
 }

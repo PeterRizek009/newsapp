@@ -1,23 +1,89 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../App'
 import { Link } from 'react-router-dom';
-
-
+import { FaInstagramSquare } from 'react-icons/fa'
+import { BsFacebook, BsTwitter, BsYoutube, BsBrowserEdge, BsTiktok } from 'react-icons/bs'
 
 const Tech = () => {
 
+    const icons = [
+        {
+            item:
+                <div className='iconBox bg-blue-500' >
+                    <BsFacebook size={30} className='bg-blue-800 text-white p-1 rounded-full cursor-pointer' />
+                    <div className='text-[10px] text-white'>
+                        <h1>1000</h1>
+                        <h1>Followers</h1>
+                    </div>
+                </div>
+        },
+        {
+            item:
+                <div className='iconBox bg-cyan-600' >
+                    <BsTwitter size={30} className='bg-cyan-800 text-white p-1 rounded-full cursor-pointer' />
+                    <div className='text-[10px] text-white '>
+                        <h1>1000</h1>
+                        <h1>Followers</h1>
+                    </div>
+                </div>
+        },
+        {
+            item:
+                <div className='iconBox bg-fuchsia-600' >
+                    <FaInstagramSquare size={30} className='bg-fuchsia-800 text-white p-1 rounded-full cursor-pointer' />
+                    <div className='text-[10px] text-white '>
+                        <h1>1000</h1>
+                        <h1>Followers</h1>
+                    </div>
+                </div>
+
+        },
+        {
+            item:
+                <div className='iconBox bg-red-500 ' >
+                    <BsYoutube size={30} className='bg-red-800 text-white p-1 rounded-full cursor-pointer' />
+                    <div className='text-[10px] text-white '>
+                        <h1>1000</h1>
+                        <h1>subscribers</h1>
+                    </div>
+                </div>
+        },
+        {
+            item:
+                <div className='iconBox bg-violet-500' >
+                    <BsBrowserEdge size={30} className='bg-violet-600 text-white p-1 rounded-full cursor-pointer' />
+                    <div className='text-[10px] text-white '>
+                        <h1>1000</h1>
+                        <h1>subscribers</h1>
+                    </div>
+                </div>
+        },
+        {
+            item:
+                <div className='iconBox bg-gray-700' >
+                    <BsTiktok size={30} className='bg-black text-red-500 p-1 rounded-full cursor-pointer' />
+                    <div className='text-[10px] text-white '>
+                        <h1>1000</h1>
+                        <h1>subscribers</h1>
+                    </div>
+                </div>
+        }
+
+    ]
+
     const data = useContext(UserContext);
+
 
     const renderDontMiss = () => {
         return (
             (data.slice(50, 55)).map((item, index) => (
-                <div className='relative my-6 md:my-0 h-full flex flex-row items-start justify-between' key={index}>
-                    <div className='absolute block w-[80px] h-[70px] px-2 bg-center bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
+                <div className='relative my-1 md:my-0 h-full flex flex-row items-start justify-between' key={index}>
+                    <div className='absolute block w-[80px] h-[80px] px-2 bg-center bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
-                    <div className='min-w-[300px] ml-20'>
-                        <h1 className='px-2 text-xs'>{item.author}</h1>
+                    <div className='min-w-[300px] ml-20 px-2'>
+                        <h1 className='text-xs'>{item.author}</h1>
                         <Link to={item.url}>
-                            <h1 className='px-2 text-md text-neutral-500'>{item.title}</h1>
+                            <h1 className='py-1 text-sm  text-neutral-500'>{item.title}</h1>
                         </Link>
                     </div>
                 </div>
@@ -26,10 +92,16 @@ const Tech = () => {
         )
     }
 
+
+
+
     return (
 
-        <div className='md:w-[1200px] md:mx-auto'>
-            <h1 className='text-red-500 text-2xl p-2 border-b-2 w-full border-black'>Tech</h1>
+        <div className='md:w-[1200px] md:mx-auto mt-6'>
+            <div className='flex justify-stretch items-center'>
+                <h1 className='text-red-500 text-xl p-2 border-b-2 w-full md:w-[800px] border-gradient-red-black uppercase'>Tech</h1>
+                <h1 className='hidden md:block text-red-500 text-lg p-2 border-b-2 md:w-[400px] border-gradient-red-black ml-6 uppercase'>Stay Connected</h1>
+            </div>
             <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto md:h-[570px]'>
                 <div className='col-span-1'>
                     <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[49].urlToImage})` }}>
@@ -49,6 +121,20 @@ const Tech = () => {
                     {renderDontMiss()}
                 </div>
 
+                <div className='col-span-1 md:mx-auto  flex flex-col justify-start'>
+                    <h1 className='md:hidden text-red-500 text-xl p-2 border-b-2 border-gradient-red-black uppercase'>Stay Connected</h1>
+                    <div className='social flex justify-between items-start flex-wrap'>
+                        {icons.map(({ item, index }) => (
+                            <div key={index}>
+                                {item}
+                            </div>
+                        )
+                        )}
+                    </div>
+                    <div className='block my-6 mx-auto md:mx-0'>
+                        <img className='block max-w-full max-h-full bg-cover' src={require("./sideadd.png")} alt='add' />
+                    </div>
+                </div>
             </section>
         </div>
     );

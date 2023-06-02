@@ -4,10 +4,10 @@ import './App.css';
 // import axios from 'axios'
 import Navbar from './components/navbar/navbar';
 import Headlines from './components/headline/headline';
-import DontMiss from './components/Dontmiss/dontmiss';
 import Entertainment from './components/entertainment/Entertainment';
 import Tech from './components/Tech/tech';
 import articles from './data.js';
+import BusinessInsider from './components/Businessinsider/businessinsider';
 
 export const UserContext = createContext()
 
@@ -23,6 +23,7 @@ function App() {
   // }
   // eslint-disable-next-line no-unused-vars
   const [data, setData] = useState(articles);
+  const [businessData, setBusinessData] = useState();
 
   const [date, setDate] = useState();
 
@@ -37,6 +38,11 @@ function App() {
   }
 
 
+  const getBusinessData =  () => {
+    setBusinessData(data.filter((el) => el.name === 'Business Insider'))
+  } 
+
+  
 
   //const request = 'https://newsapi.org/v2/everything?q=apple&from=2023-05-27&to=2023-06-1&sortBy=popularity&apiKey=b15ae682b7ef499a89e9b4c9302f4d83';
 
@@ -57,6 +63,7 @@ function App() {
 
     const timeoutId = setTimeout(() => {
       getDate();
+      getBusinessData()
       //getData()
     }, delay);
 
@@ -88,7 +95,7 @@ function App() {
         {showComponent &&
           <div className='flex flex-col justify-start '>
             <Headlines data={data} />
-            <DontMiss />
+            <BusinessInsider businessData={businessData}/>
             <Entertainment />
             <Tech />
           </div>

@@ -6,8 +6,8 @@ const Headlines = ({ data }) => {
 
     const renderHeadline = (index) => {
         return (
-            <div className='absolute bottom-[5%]  flex flex-col items-start  px-8 text-red-500'>
-                <div className='flex justify-between text-sm md:text-lg py-3'>
+            <div className='absolute bottom-[5%]  flex flex-col items-start  px-4 text-red-500'>
+                <div className='flex justify-between text-sm md:text-lg py-2'>
                     <h1>
                         {data[index].author}
                     </h1>
@@ -22,7 +22,7 @@ const Headlines = ({ data }) => {
 
     return (
 
-        <section className='grid grid-cols-2 grid-rows-3 md:grid-cols-4 md:grid-rows-2 py-4  gap-2 md:w-[1200px] md:mx-auto  h-[570px] '>
+        <section className='grid grid-cols-2 grid-rows-3 md:grid-cols-4 md:grid-rows-2 py-4  gap-2 md:w-[1200px] md:mx-auto h-[750px] md:h-[570px]'>
 
             <div className='relative col-span-2 row-span-1  md:row-span-2 bg-cover bg-center ' style={{ backgroundImage: `url(${data[0].urlToImage})` }}>
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>

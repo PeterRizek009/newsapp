@@ -62,20 +62,20 @@ const Entertainment = () => {
     return (
         <section className='md:w-[1200px] md:mx-auto '>
             <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} >
-                <div className='flex justify-between items-start border-black border-b-2 p-2'>
+                <div className='flex justify-between items-start border-gradient-red-black p-2'>
                     <h1 className='text-red-500 text-2xl w-full '>Entertainment</h1>
                     <div className='flex '>
-                        <button type="button" className="mr-2 bg-red-600 text-white p-1 rounded hover:bg-gray-500" onClick={() => index === 0 ? setIndex(slider.length - 1) : setIndex(index - 1)}>
+                        <button type="button" className="mr-2 bg-red-600  p-1 rounded hover:bg-gray-500"  onClick={() => index === 0 ? setIndex(slider.length - 1) : setIndex(index - 1)}>
                             <GrPrevious />
                         </button>
-                        <button type="button" className=" bg-red-600 text-white p-1 rounded hover:bg-gray-500" onClick={() => index === 0 ? setIndex(slider.length - 1) : setIndex(index - 1)}>
+                        <button type="button" className=" bg-red-600  p-1 rounded hover:bg-gray-500" onClick={() => index === 0 ? setIndex(slider.length - 1) : setIndex(index - 1)}>
                             <GrNext />
                         </button>
                     </div>
                 </div>
             </motion.div>
             <div className='md:w-[1200px] flex flex-col justify-start' >
-                <div className='relative w-full h-[550px] object-cover bg-center block my-6 inset-0' style={{ backgroundImage: `url(${slider[index].image})` }}>
+                <div className='relative max-w-full h-[550px] object-cover bg-center block my-6 inset-0' style={{ backgroundImage: `url(${slider[index].image})` }}>
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
                     <div className='absolute bottom-[15%]  flex flex-col items-start  px-8 text-red-500'>
                         <div className='flex justify-between text-sm md:text-lg py-3'>

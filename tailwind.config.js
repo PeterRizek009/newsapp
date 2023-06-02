@@ -26,8 +26,7 @@ module.exports = {
         'waving': 'wave 2s linear 2s',
       },
 
-
-      },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
+}
