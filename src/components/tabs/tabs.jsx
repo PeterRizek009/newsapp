@@ -29,8 +29,8 @@ const TabContainer = ({ data }) => {
         return (
             headerDatar.map((item, index) => (
                 <li className={toggleTab === index ?
-                    "flex-1 border-b-2 border-red-500 transition-all duration-100 ease-in-out shadow-md"
-                    : "flex-1 border-b-2 border-gray-950 shadow-sm"} key={index}>
+                    "flex-1 border-b-2 border-red-500 transition-all duration-100 ease-in-out shadow-sm"
+                    : "flex-1 border-b-2 border-gray-950"} key={index}>
                     <div className="relative block p-2">
                         <div className="flex items-center justify-center gap-2 md:gap-4">
                             <span className={toggleTab === index ?

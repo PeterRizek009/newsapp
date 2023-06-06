@@ -77,7 +77,7 @@ const Tech = () => {
     const renderDontMiss = () => {
         return (
             (data.slice(50, 55)).map((item, index) => (
-                <div className='relative my-1 md:my-0 h-full flex flex-row items-start justify-between' key={index}>
+                <div className='relative my-4 md:my-0 h-full flex flex-row items-start justify-between' key={index}>
                     <div className='absolute block w-[80px] h-[80px] px-2 bg-center bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
                     <div className='min-w-[300px] ml-20 px-2'>
@@ -99,7 +99,7 @@ const Tech = () => {
 
         <div className='md:w-[1200px] md:mx-auto mt-6'>
             <div className='flex justify-stretch items-center'>
-                <h1 className='text-red-500 text-xl p-2 border-b-2 w-full md:w-[800px] border-gradient-red-black uppercase'>Tech</h1>
+                <h1 className='title md:w-[800px] border-gradient-red-black'>Tech</h1>
                 <h1 className='hidden md:block text-red-500 text-lg p-2 border-b-2 md:w-[400px] border-gradient-red-black ml-6 uppercase'>Stay Connected</h1>
             </div>
             <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto md:h-[570px]'>
@@ -131,8 +131,8 @@ const Tech = () => {
                         )
                         )}
                     </div>
-                    <div className='block my-6 mx-auto md:mx-0'>
-                        <img className='block max-w-full max-h-full bg-cover' src={require("./sideadd.png")} alt='add' />
+                    <div className='block my-6  md:mx-0'>
+                        <img className='block max-w-full max-h-full bg-cover mx-auto' src={require("./sideadd.png")} alt='add' />
                     </div>
                 </div>
             </section>

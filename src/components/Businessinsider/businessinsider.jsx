@@ -29,7 +29,7 @@ const BusinessInsider = ({ businessData }) => {
 
     return (
         <div className='md:w-[1200px] md:mx-auto'>
-            <h1 className='text-red-500 text-2xl p-2 border-b-2 w-full border-black uppercase'>business insider</h1>
+            <h1 className='title border-gradient-red-black w-full'>business insider</h1>
             <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto md:h-[570px]'>
                 <div className='col-span-1'>
                     <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${businessData[6].urlToImage})` }}>

@@ -8,6 +8,7 @@ import Entertainment from './components/entertainment/Entertainment';
 import Tech from './components/Tech/tech';
 import articles from './data.js';
 import BusinessInsider from './components/Businessinsider/businessinsider';
+import LifeStyle from './components/lifestyle/lifestyle';
 
 export const UserContext = createContext()
 
@@ -98,6 +99,7 @@ function App() {
             <BusinessInsider businessData={businessData}/>
             <Entertainment />
             <Tech />
+            <LifeStyle />
           </div>
         }
 

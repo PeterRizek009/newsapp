@@ -12,9 +12,12 @@
 }
 
 .iconBox {
-  @apply flex justify-between mx-4 md:mx-1 w-[200px] md:w-[180px] px-8 py-3 my-2 cursor-pointer;
+  @apply flex md:justify-between justify-evenly mx-2 md:mx-1 w-[220px] md:w-[180px] px-8 py-3 my-2 cursor-pointer shadow-md;
 }
 
+.title{
+  @apply text-red-500 text-xl p-2 border-b-2 w-full font-bold;
+}
 @layer utilities {
     .border-gradient-red-black {
       border-bottom: 2px;
