@@ -123,7 +123,7 @@ const Tech = () => {
 
                 <div className='col-span-1 md:mx-auto  flex flex-col justify-start'>
                     <h1 className='md:hidden text-red-500 text-xl p-2 border-b-2 border-gradient-red-black uppercase'>Stay Connected</h1>
-                    <div className='social flex justify-between items-start flex-wrap'>
+                    <div className='social flex justify-between  items-start flex-wrap'>
                         {icons.map(({ item, index }) => (
                             <div key={index}>
                                 {item}

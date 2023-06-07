@@ -35,12 +35,11 @@ const LifeStyle = () => {
             <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
             </div>
             <div className='w-full h-auto flex flex-row flex-wrap'>
-                <div className='w-full flex  justify-start m-2'>
+                <div className='w-full flex  justify-start'>
                     <h1>{data[a].author}</h1>
-                    <h1>{data[a].publishedAt}</h1>
                 </div>
                 <Link to={data[a].url}>
-                    <h1 className=' text-neutral-400'>{data[a].title}</h1>
+                    <h1 className=' text-neutral-400 text-sm'>{data[a].title}</h1>
                 </Link>
             </div>
         </>
@@ -55,14 +54,14 @@ const LifeStyle = () => {
             <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto md:h-auto'>
                 <div className='col-span-1'>
                        {getHead(60)}
-                    <div className='flex flex-col m-4  md:my-2 justify-start'>
+                    <div className='flex flex-col  md:my-2 justify-start'>
                         {colDats(61, 63)}
                     </div>
                 </div>
 
                 <div className='col-span-1'>
                        {getHead(80)}
-                    <div className='flex flex-col m-4  md:my-2 justify-start'>
+                    <div className='flex flex-col  md:my-2 justify-start'>
                         {colDats(65, 67)}
                     </div>
                 </div>

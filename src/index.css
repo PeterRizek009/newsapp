@@ -13,7 +13,7 @@
 }
 
 .iconBox {
-  @apply flex md:justify-between justify-evenly mx-2 md:mx-1 w-[220px] md:w-[180px] px-8 py-3 my-2 cursor-pointer shadow-md;
+  @apply flex md:justify-between justify-evenly mx-2 md:mx-1 w-[160px] md:w-[180px] px-8 py-3 my-2 cursor-pointer shadow-md;
 }
 
 .title{

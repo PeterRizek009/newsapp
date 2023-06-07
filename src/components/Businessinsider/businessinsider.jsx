@@ -10,14 +10,14 @@ const BusinessInsider = ({ businessData }) => {
 
     const renderDontMiss = () => {
         return (
-            (businessData.slice(1, 5)).map((item, index) => (
-                <div className='relative my-6 md:my-0 h-full flex flex-row items-start justify-between ' key={index}>
+            (businessData.slice(1, 6)).map((item, index) => (
+                <div className='relative my-3 md:my-0 h-full flex flex-row items-start justify-between ' key={index}>
                     <div className='absolute block w-[80px] h-[70px] px-2 bg-center bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
                     <div className='min-w-[300px] ml-20'>
                         <h1 className='px-2 text-xs'>{item.author}</h1>
                         <Link to={item.url}>
-                            <h1 className='px-2 text-md text-neutral-500'>{item.title}</h1>
+                            <h1 className='px-2 text-xs  text-neutral-500'>{item.title}</h1>
                         </Link>
                     </div>
                 </div>

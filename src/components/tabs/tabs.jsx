@@ -49,7 +49,7 @@ const TabContainer = ({ data }) => {
     const renderTabsContent = () => {
         return (
             (data.slice(headerDatar[toggleTab].start, (headerDatar[toggleTab].start) + 5)).map((item, index) => (
-                <div className='relative h-full flex flex-row items-start justify-start py-6 ' key={index}>
+                <div className='relative h-full flex flex-row items-start justify-start py-5 ' key={index}>
                     <div className='absolute block h-[60px] w-[70px] px-2 bg-center bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
                     <div className='text-xs px-2 ml-20'>
