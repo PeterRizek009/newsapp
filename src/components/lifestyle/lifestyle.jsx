@@ -66,6 +66,18 @@ const LifeStyle = () => {
                         {colDats(65, 67)}
                     </div>
                 </div>
+
+                <div className='col-span-1'>
+                    <div className='flex flex-col items-center justify-center w-[300px] h-[220px] mx-auto bg-neutral-300 font-bold'>
+                        <h1>Get latest Updates</h1>
+                        <input className='w-[220px] h-[40px] my-4 bg-white text-slate-950 text-xs text-center' placeholder='Your email address' ></input>
+                        <button className='w-[220px] h-[40px] bg-red-500 text-white hover:bg-red-900'> Subscribe</button>
+
+                    </div>
+                  
+                    
+                    
+                </div>
             </section>
         </div>
 
