@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 .nav-link{
     @apply  hover:bg-red-500 cursor-pointer md:p-5 p-2 my-2 md:m-2 text-white;
 }
@@ -24,5 +25,9 @@
       border-style: solid;
       border-image: linear-gradient(to right, red,rgb(114, 110, 110), black) 1;
       border-image-slice: 1;
+    }
+
+    .animate__animated {
+      animation-duration: 1.5s;
     }
   }
