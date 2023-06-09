@@ -27,7 +27,10 @@
       border-image-slice: 1;
     }
 
-    .animate__animated {
+    .animate__animated
+    .animate__flash {
       animation-duration: 1.5s;
+      animation-delay: 4s;
+      
     }
   }

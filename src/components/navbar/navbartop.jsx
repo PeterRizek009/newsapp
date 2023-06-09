@@ -3,14 +3,17 @@ import { TiWeatherSunny } from 'react-icons/ti'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 
 import { UserContext } from '../../App'
-import { motion } from "framer-motion";
 
-const NavbarTop = ({ day, date , icons}) => {
+
+const NavbarTop = ({ day, date, icons }) => {
 
     const data = useContext(UserContext);
 
 
+
+
     const [index, setIndex] = useState(0)
+
 
 
     useEffect(() => {
@@ -21,6 +24,7 @@ const NavbarTop = ({ day, date , icons}) => {
                 setIndex(0)
                 :
                 setIndex(index + 1)
+      
         }, delay);
 
         return () => clearTimeout(timeoutId);
@@ -29,20 +33,17 @@ const NavbarTop = ({ day, date , icons}) => {
 
 
 
-  
-
-
 
 
     return (
-        <div className='absolute w-full md:min-w-[1200px] h-12 md:h-10 md:px-4  top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs bg-white text-black'>
+        <div className='fixed w-full md:min-w-[1200px] h-12 md:h-10 md:px-4 z-50 top-0 border-b-1 shadow-md flex flex-row  justify-between items-center text-xs bg-neutral-800 text-white'>
             <div className='md:mx-2 flex justify-between items-center '>
                 <p className='hidden md:flex md:mx-1'>
-                    <span className='px-1 pt-0.5'>
-                        <TiWeatherSunny />
+                    <span className='px-1  text-orange-500'>
+                        <TiWeatherSunny size={18} />
                     </span>
                     <span className='px-1'>
-                        18C
+                        30°C
                     </span>
                     <span className='px-1'>
                         Alexandria
@@ -50,8 +51,8 @@ const NavbarTop = ({ day, date , icons}) => {
                 </p>
 
                 <p className='hidden w-[150px] md:flex md:mx-1'>
-                    <span className='px-1 pt-0.5'>
-                        <AiOutlineClockCircle />
+                    <span className='px-1  text-orange-500'>
+                        <AiOutlineClockCircle size={18} />
                     </span>
                     <span className='px-1'>
                         {day}
@@ -66,12 +67,10 @@ const NavbarTop = ({ day, date , icons}) => {
                     <h1 className='bg-red-500  w-[110px] h-12 md:h-10 text-white p-3'>
                         Breaking News
                     </h1>
-                    <motion.h4 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{
-                        duration: '0.7',
-                        delay: '1'
-                    }} className='px-1 truncate w-[310px] md:w-[350px]'>
+                    <h4 className='px-1 truncate w-[290px] md:w-[350px] lg:w-[600px] transition-all duration-300 opacity-100 ease-in-out'
+                    >
                         {(data[index].description)}
-                    </motion.h4>
+                    </h4>
 
                 </div>
             </div>

@@ -77,13 +77,13 @@ const Tech = () => {
     const renderDontMiss = () => {
         return (
             (data.slice(50, 55)).map((item, index) => (
-                <div className='relative my-4 md:my-0 h-full flex flex-row items-start justify-between' key={index}>
-                    <div className='absolute block w-[80px] h-[80px] px-2 bg-center bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
+                <div className='relative my-4 md:my-0 h-full flex flex-row items-start md:justify-between' key={index}>
+                    <div className='relative block min-w-[85px] min-h-[60px] px-2  bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
-                    <div className='min-w-[300px] ml-20 px-2'>
+                    <div className='w-[300px] px-2'>
                         <h1 className='text-xs'>{item.author}</h1>
                         <Link to={item.url}>
-                            <h1 className='py-1 text-sm  text-neutral-500'>{item.title}</h1>
+                            <h1 className='truncate py-1 text-sm  text-neutral-500'>{item.title}</h1>
                         </Link>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ const Tech = () => {
 
                 <div className='col-span-1 md:mx-auto  flex flex-col justify-start'>
                     <h1 className='md:hidden text-red-500 text-xl p-2 border-b-2 border-gradient-red-black uppercase'>Stay Connected</h1>
-                    <div className='social flex justify-between  items-start flex-wrap'>
+                    <div className='social flex justify-around  items-start flex-wrap'>
                         {icons.map(({ item, index }) => (
                             <div key={index}>
                                 {item}

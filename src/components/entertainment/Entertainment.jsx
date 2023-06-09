@@ -75,8 +75,8 @@ const Entertainment = () => {
                 </div>
             </div>
 
-            <div className='md:w-[1200px] flex flex-col justify-start animate__animated animate__backInLeft' >
-                <div className='relative max-w-full h-[550px] object-cover bg-center block my-6 inset-0' style={{ backgroundImage: `url(${slider[index].image})` }}>
+            <div className='md:w-[1200px] flex flex-col justify-start animate__animated animate__backInLeft ' >
+                <div className='relative max-w-full h-[550px] object-cover bg-center block my-6 inset-0 shadow-md' style={{ backgroundImage: `url(${slider[index].image})` }}>
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
                     <div className='absolute bottom-[15%]  flex flex-col items-start  px-8 text-red-500'>
                         <div className='flex justify-between text-sm md:text-lg py-3'>

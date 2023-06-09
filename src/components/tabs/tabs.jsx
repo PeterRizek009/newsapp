@@ -50,9 +50,9 @@ const TabContainer = ({ data }) => {
         return (
             (data.slice(headerDatar[toggleTab].start, (headerDatar[toggleTab].start) + 5)).map((item, index) => (
                 <div className='relative h-full flex flex-row items-start justify-start py-5 ' key={index}>
-                    <div className='absolute block h-[60px] w-[70px] px-2 bg-center bg-cover' style={{ backgroundImage: `url(${item.urlToImage})` }}>
+                    <div className='relative block min-w-[85px] min-h-[60px] my-auto px-2 bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
-                    <div className='text-xs px-2 ml-20'>
+                    <div className='text-xs px-2'>
                         <h1>{item.author}</h1>
                         <Link to={item.url}>
                             <h1 className='text-md text-neutral-500'>{item.title}</h1>
