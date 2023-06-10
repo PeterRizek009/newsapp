@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../App'
 import { Link } from 'react-router-dom';
+import AccordionData from '../accordion/accordion';
 
 
 
@@ -14,13 +15,13 @@ const LifeStyle = () => {
     const colDats = (a, b) => {
         return (
             (data.slice(a, b)).map((item, index) => (
-                <div className='relative my-2 h-[100px] flex flex-row items-start justify-between' key={index}>
-                    <div className='relative block min-w-[85px] min-h-[60px]  px-2 bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }} >
+                <div className='relative h-[100px]  flex flex-row items-start justify-between' key={index}>
+                    <div className='relative block w-[85px] h-[70px] p-1 bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }} >
                     </div>
-                    <div className='w-[300px] px-2'>
+                    <div className='w-full mx-2'>
                         <h1 className='text-xs'>{item.author}</h1>
                         <Link to={item.url}>
-                            <h1 className='truncate py-1 text-sm  text-neutral-500'>{item.title}</h1>
+                            <h1 className='truncate w-[280px]  text-sm  text-neutral-500'>{(item.title)}</h1>
                         </Link>
                     </div>
                 </div>
@@ -31,51 +32,53 @@ const LifeStyle = () => {
 
     const getHead = (a) => {
         return (
-        <>
-            <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
-            </div>
-            <div className='w-full h-auto flex flex-row flex-wrap'>
-                <div className='w-full flex  justify-start'>
-                    <h1>{data[a].author}</h1>
+            <>
+                <div className='relative h-[290px] md:w-full w-[380px] mx-auto py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
                 </div>
-                <Link to={data[a].url}>
-                    <h1 className='text-neutral-400 text-sm'>{data[a].title}</h1>
-                </Link>
-            </div>
-        </>
+                <div className='w-full h-auto  flex flex-row flex-wrap p-2'>
+                    <div className='w-full flex  justify-start '>
+                        <h1 >{data[a].author}</h1>
+                    </div>
+                    <Link to={data[a].url}>
+                        <h1 className='w-[300px] h-[5  0px] text-neutral-400 text-sm'>{(data[a].title).slice(0, 58)}</h1>
+                    </Link>
+                </div>
+            </>
         )
     }
 
 
 
     return (
-        <div className='md:w-[1200px] md:mx-auto mt-6'>
-            <h1 className='title md:w-[800px] border-gradient-red-black '>Life Style</h1>
-            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto md:h-auto'>
+        <div className='md:w-[1600px] md:mx-auto mt-6'>
+            <h1 className='title md:w-[1200px] border-gradient-red-black '>Life Style</h1>
+            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1600px] md:mx-auto md:h-auto'>
                 <div className='col-span-1'>
-                       {getHead(60)}
-                    <div className='flex flex-col  md:my-2 justify-start'>
-                        {colDats(61, 63)}
+                    {getHead(60)}
+                    <div className='flex flex-col  md:my-2 justify-start p-2'>
+                        {colDats(61, 64)}
                     </div>
                 </div>
 
                 <div className='col-span-1'>
-                       {getHead(80)}
-                    <div className='flex flex-col  md:my-2 justify-start'>
-                        {colDats(65, 67)}
+                    {getHead(80)}
+                    <div className='flex flex-col  md:my-2 justify-start p-2'>
+                        {colDats(65, 68)}
                     </div>
                 </div>
 
-                <div className='col-span-1'>
-                    <div className='flex flex-col items-center justify-center w-[300px] h-[220px] mx-auto bg-neutral-300 font-bold shadow-sm'>
+
+
+                <div className='col-span-1 md:mx-28'>
+                    <div className='flex flex-col items-center justify-center w-[400px] h-[280px]  bg-neutral-300 font-bold shadow-md'>
                         <h1>Get latest Updates</h1>
                         <input className='w-[220px] h-[40px] my-4 bg-white text-slate-950 text-xs text-center' placeholder='Your email address' ></input>
                         <button className='w-[220px] h-[40px] bg-red-500 text-white hover:bg-red-900'> Subscribe</button>
 
                     </div>
-                  
-                    
-                    
+
+
+                    <AccordionData />
                 </div>
             </section>
         </div>

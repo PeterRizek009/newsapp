@@ -94,7 +94,7 @@ function App() {
       <UserContext.Provider value={data}>
         <Navbar date={date} day={day} />
         {showComponent &&
-          <div className='flex flex-col justify-start '>
+          <div className='flex flex-col justify-start'>
             <Headlines data={data} />
             <BusinessInsider businessData={businessData}/>
             <Entertainment />

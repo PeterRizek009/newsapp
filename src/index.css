@@ -2,35 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.nav-link{
-    @apply  hover:bg-red-500 cursor-pointer md:p-5 p-2 my-2 md:m-2 text-white;
+.nav-link {
+  @apply hover:bg-red-500 cursor-pointer md:p-5 p-2 my-2 md:m-2 text-white;
 }
 
-.items{
-    @apply relative h-[100px]  max-w-[350px] md:w-full  flex justify-between items-center mx-1 my-1 md:my-0  border-2 rounded-md;
+.items {
+  @apply relative h-[100px]  max-w-[350px] md:w-full  flex justify-between items-center mx-1 my-1 md:my-0  border-2 rounded-md;
 }
 
 .iconBox {
   @apply flex md:justify-between justify-evenly mx-2 md:mx-1 w-[160px] md:w-[180px] px-8 py-3 my-2 cursor-pointer shadow-md;
 }
 
-.title{
+.title {
   @apply text-red-500 text-xl p-2 border-b-2 w-full font-bold;
 }
 @layer utilities {
-    .border-gradient-red-black {
-      border-bottom: 2px;
-      border-style: solid;
-      border-image: linear-gradient(to right, red,rgb(114, 110, 110), black) 1;
-      border-image-slice: 1;
+  .border-gradient-red-black {
+    border-bottom: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, red, rgb(114, 110, 110), black) 1;
+    border-image-slice: 1;
+  }
+
+  .animate__animated .animate__flash {
+    animation-duration: 1.5s;
+    animation-delay: 4s;
+  }
+
+  @keyframes rotateText {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
     }
 
-    .animate__animated
-    .animate__flash {
-      animation-duration: 1.5s;
-      animation-delay: 4s;
-      
+    100% {
+      opacity: 0;
     }
   }
+
+  .rotating-text {
+    animation: rotateText 10s ease-in-out infinite;
+  }
+}

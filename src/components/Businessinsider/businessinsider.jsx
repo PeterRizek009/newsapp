@@ -2,35 +2,17 @@ import React, { useContext } from 'react';
 import { UserContext } from '../../App'
 import { Link } from 'react-router-dom';
 import TabContainer from '../tabs/tabs';
+import { ColData } from './../coldata/coldata';
 
 const BusinessInsider = ({ businessData }) => {
 
     const data = useContext(UserContext);
 
 
-    const renderDontMiss = () => {
-        return (
-            (businessData.slice(1, 6)).map((item, index) => (
-                <div className='relative my-3 md:my-0 h-full flex flex-row items-start md:justify-between ' key={index}>
-                    <div className='relative block min-w-[85px] min-h-[60px] px-2 bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }}>
-                    </div>
-                    <div className='max-w-[300px]'>
-                        <h1 className='px-2 text-xs'>{item.author}</h1>
-                        <Link to={item.url}>
-                            <h1 className='px-2 text-xs  text-neutral-500'>{item.title}</h1>
-                        </Link>
-                    </div>
-                </div>
-
-            ))
-        )
-    }
-
-
     return (
-        <div className='md:w-[1200px] md:mx-auto'>
+        <div className='md:w-[1600px] md:mx-auto'>
             <h1 className='title border-gradient-red-black w-full'>business insider</h1>
-            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto md:h-[570px]'>
+            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1600px] mx-auto md:h-[570px]'>
                 <div className='col-span-1'>
                     <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${businessData[9].urlToImage})` }}>
                     </div>
@@ -43,7 +25,7 @@ const BusinessInsider = ({ businessData }) => {
                     </div>
                 </div>
                 <div className='col-span-1 flex flex-col mx-4 my-4 md:m-0 justify-start'>
-                    {renderDontMiss()}
+                <ColData data={data} a={11} b={16}/>
                 </div>
 
 

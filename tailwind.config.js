@@ -2,11 +2,12 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/tw-elements/dist/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {
       fontFamily: {
-        opensans: ['Open Sans', 'sans-serif']
+        opensans: ['Arial', 'sans-serif']
 
       },
       grayscale: {
@@ -28,5 +29,5 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
 }

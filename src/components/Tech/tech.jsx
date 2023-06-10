@@ -3,6 +3,7 @@ import { UserContext } from '../../App'
 import { Link } from 'react-router-dom';
 import { FaInstagramSquare } from 'react-icons/fa'
 import { BsFacebook, BsTwitter, BsYoutube, BsBrowserEdge, BsTiktok } from 'react-icons/bs'
+import { ColData } from '../coldata/coldata';
 
 const Tech = () => {
 
@@ -74,35 +75,35 @@ const Tech = () => {
     const data = useContext(UserContext);
 
 
-    const renderDontMiss = () => {
-        return (
-            (data.slice(50, 55)).map((item, index) => (
-                <div className='relative my-4 md:my-0 h-full flex flex-row items-start md:justify-between' key={index}>
-                    <div className='relative block min-w-[85px] min-h-[60px] px-2  bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }}>
-                    </div>
-                    <div className='w-[300px] px-2'>
-                        <h1 className='text-xs'>{item.author}</h1>
-                        <Link to={item.url}>
-                            <h1 className='truncate py-1 text-sm  text-neutral-500'>{item.title}</h1>
-                        </Link>
-                    </div>
-                </div>
+    // const renderDontMiss = () => {
+    //     return (
+    //         (data.slice(50, 55)).map((item, index) => (
+    //             <div className='relative my-4 md:m-0 h-full flex flex-row items-start md:justify-start' key={index}>
+    //                 <div className='relative block w-[85px] h-[70px] px-2  bg-cover  bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }}>
+    //                 </div>
+    //                 <div className='w-[300px] px-2'>
+    //                     <h1 className='text-xs'>{item.author}</h1>
+    //                     <Link to={item.url}>
+    //                         <h1 className='py-1 text-sm  text-neutral-500'>{item.title}</h1>
+    //                     </Link>
+    //                 </div>
+    //             </div>
 
-            ))
-        )
-    }
+    //         ))
+    //     )
+    // }
 
 
 
 
     return (
 
-        <div className='md:w-[1200px] md:mx-auto mt-6'>
+        <div className='md:w-[1600px] md:mx-auto mt-6'>
             <div className='flex justify-stretch items-center'>
-                <h1 className='title md:w-[800px] border-gradient-red-black'>Tech</h1>
+                <h1 className='title md:w-[1200px] border-gradient-red-black'>Tech</h1>
                 <h1 className='hidden md:block text-red-500 text-lg p-2 border-b-2 md:w-[400px] border-gradient-red-black ml-6 uppercase'>Stay Connected</h1>
             </div>
-            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1200px] md:mx-auto md:h-[570px]'>
+            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1600px] md:mx-auto md:h-[570px]'>
                 <div className='col-span-1'>
                     <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[49].urlToImage})` }}>
                     </div>
@@ -118,12 +119,12 @@ const Tech = () => {
                     </div>
                 </div>
                 <div className='col-span-1 flex flex-col mx-4 my-4 md:m-0 justify-start'>
-                    {renderDontMiss()}
+                    <ColData data={data} a={50} b={55}/>
                 </div>
 
-                <div className='col-span-1 md:mx-auto  flex flex-col justify-start'>
+                <div className='col-span-1   flex flex-col justify-start'>
                     <h1 className='md:hidden text-red-500 text-xl p-2 border-b-2 border-gradient-red-black uppercase'>Stay Connected</h1>
-                    <div className='social flex justify-around  items-start flex-wrap'>
+                    <div className='social flex justify-around md:ml-28   items-start flex-wrap'>
                         {icons.map(({ item, index }) => (
                             <div key={index}>
                                 {item}
