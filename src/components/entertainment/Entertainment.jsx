@@ -9,6 +9,7 @@ const Entertainment = () => {
     const data = useContext(UserContext);
 
     const [index, setIndex] = useState(0)
+    const [clicked, setClicked] = useState(false)
 
 
     const slider = [
@@ -56,6 +57,17 @@ const Entertainment = () => {
     //     )
     // }
 
+    const animationWork = () => {
+        setTimeout(() => {
+            setClicked(true)
+        }, 5);
+        setClicked(false)
+    } 
+
+    const nextSlide = () => {
+        index === 0 ? setIndex(slider.length - 1) : setIndex(index - 1);
+        animationWork()
+    } 
   
 
 
@@ -69,14 +81,15 @@ const Entertainment = () => {
                     <button type="button" className="mr-2 bg-red-600  p-1 rounded hover:bg-gray-500" onClick={() => index === 0 ? setIndex(slider.length - 1) : setIndex(index - 1)}>
                         <GrPrevious />
                     </button>
-                    <button type="button" className=" bg-red-600  p-1 rounded hover:bg-gray-500" onClick={() => index === 0 ? setIndex(slider.length - 1) : setIndex(index - 1)}>
+                    <button type="button" className=" bg-red-600  p-1 rounded hover:bg-gray-500" onClick={() => nextSlide()}>
                         <GrNext />
                     </button>
                 </div>
             </div>
 
-            <div className='md:w-[1600px] flex flex-col justify-start animate__animated animate__backInLeft ' >
-                <div className='relative max-w-full h-[700px] bg-cover bg-no-repeat bg-center block my-6 inset-0 shadow-md' style={{ backgroundImage: `url(${slider[index].image})` }}>
+            <div className='md:w-[1600px] flex flex-col justify-start' >
+                <div className={clicked === true ? `relative max-w-full h-[700px] bg-cover bg-no-repeat bg-center block my-6 inset-0 shadow-md animated-tabs` 
+                : 'relative max-w-full h-[700px] bg-cover bg-no-repeat bg-center block my-6 inset-0 shadow-md'} style={{ backgroundImage: `url(${slider[index].image})` }}>
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
                     <div className='absolute bottom-[15%]  flex flex-col items-start  px-8 text-red-500'>
                         <div className='flex justify-between text-sm md:text-lg py-3'>

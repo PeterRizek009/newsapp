@@ -30,7 +30,7 @@ const TabContainer = ({ data }) => {
             headerDatar.map((item, index) => (
                 <li className={toggleTab === index ?
                     "flex-1 border-b-4 border-red-500  animate__animated animate__bounceIn"
-                    : "flex-1 border-b-2 border-gray-950"} key={index}>
+                    : "flex-1 border-b-2 border-gray-950 w-[100px]"} key={index}>
                     <div className="relative block p-2">
                         <div className="flex items-center justify-center gap-2 md:gap-4">
                             <span className={toggleTab === index ?
@@ -49,7 +49,7 @@ const TabContainer = ({ data }) => {
     const renderTabsContent = () => {
         return (
             (data.slice(headerDatar[toggleTab].start, (headerDatar[toggleTab].start) + 5)).map((item, index) => (
-                <div className='relative h-full flex flex-row items-start justify-start py-5 ' key={index}>
+                <div className='relative h-full flex flex-row items-start justify-start py-5 animated-tabs' key={index}>
                     <div className='relative block min-w-[85px] min-h-[60px] my-auto px-2 bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
                     <div className='text-xs px-2'>
