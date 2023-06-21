@@ -78,7 +78,7 @@ const LifeStyle = () => {
                     </div>
 
 
-                    <AccordionData />
+                    <AccordionData data={data}/>
                 </div>
             </section>
         </div>

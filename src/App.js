@@ -78,7 +78,7 @@ function App() {
 
 
   useEffect(() => {
-    const delay = 5000; // Delay in milliseconds
+    const delay = 3000; // Delay in milliseconds
 
     const timeoutId = setTimeout(() => {
       setShowComponent(true);

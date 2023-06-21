@@ -49,4 +49,49 @@
   .rotating-text {
     animation: rotateText 10s ease-in-out infinite;
   }
+
+  .animated-word {
+    animation: wordAnimation 2s infinite;
+  }
+  
+  @keyframes wordAnimation {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  }
+
+
+  .typing-animation {
+    overflow: hidden; /* Hide overflowing text */
+    animation: typing 4s steps(12) forwards;
+    white-space: nowrap; /* Keep text on a single line */
+    border-right: 0.15em solid; /* Create a blinking cursor effect */
+    font-family: "Arial", sans-serif; /* Adjust the font as needed */
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0; /* Start with no width */
+    }
+    25% {
+      width: 25%; /* Start with no width */
+    }
+    50% {
+      width: 50%; /* Start with no width */
+    }
+    100% {
+      width: 100%; /* Complete the width */
+    }
+  }
+  
 }
