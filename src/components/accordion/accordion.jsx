@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { GrNext } from 'react-icons/gr'
 
 const AccordionItem = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +9,10 @@ const AccordionItem = ({ title, content }) => {
     };
 
     return (
-        <div className="border border-gray-300 rounded-lg mb-2">
-            <div className="accordion-header py-2 px-4" onClick={toggleAccordion}>
-                <h3 className="font-semibold">{title}</h3>
+        <div className="mb-2">
+            <div className="accordion-header flex justify-start items-center py-2 px-4 cursor-pointer" onClick={toggleAccordion}>
+                <GrNext size={14}/>
+                <h3 className="font-semibold mx-4">{title}</h3>
             </div>
             {isOpen && (
                 <div className="accordion-body px-4">
@@ -23,9 +25,12 @@ const AccordionItem = ({ title, content }) => {
 
 const AccordionData = () => {
     const accordionData = [
-        { title: 'Accordion Item 1', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-        { title: 'Accordion Item 2', content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.' },
-        { title: 'Accordion Item 3', content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.' },
+        {
+            title: 'Engadget',
+            content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
+        { title: 'Wired', content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.' },
+        { title: 'The Verge', content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.' },
     ];
 
     return (

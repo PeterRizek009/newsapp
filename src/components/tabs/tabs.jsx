@@ -29,7 +29,7 @@ const TabContainer = ({ data }) => {
         return (
             headerDatar.map((item, index) => (
                 <li className={toggleTab === index ?
-                    "flex-1 border-b-2 border-red-500  animate__animated animate__bounceIn"
+                    "flex-1 border-b-4 border-red-500  animate__animated animate__bounceIn"
                     : "flex-1 border-b-2 border-gray-950"} key={index}>
                     <div className="relative block p-2">
                         <div className="flex items-center justify-center gap-2 md:gap-4">

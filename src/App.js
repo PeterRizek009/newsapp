@@ -9,6 +9,7 @@ import Tech from './components/Tech/tech';
 import articles from './data.js';
 import BusinessInsider from './components/Businessinsider/businessinsider';
 import LifeStyle from './components/lifestyle/lifestyle';
+import Loading from './components/loading/loading';
 
 export const UserContext = createContext()
 
@@ -27,7 +28,7 @@ function App() {
   const [businessData, setBusinessData] = useState();
 
   const [date, setDate] = useState();
-
+  const [showComponent, setShowComponent] = useState(false);
   const [day, setDay] = useState('');
 
   // const lastWeek = '2023-05-26';
@@ -39,11 +40,11 @@ function App() {
   }
 
 
-  const getBusinessData =  () => {
+  const getBusinessData = () => {
     setBusinessData(data.filter((el) => el.name === 'Business Insider'))
-  } 
+  }
 
-  
+
 
   //const request = 'https://newsapi.org/v2/everything?q=apple&from=2023-05-27&to=2023-06-1&sortBy=popularity&apiKey=b15ae682b7ef499a89e9b4c9302f4d83';
 
@@ -74,7 +75,7 @@ function App() {
   }, [])
 
 
-  const [showComponent, setShowComponent] = useState(false);
+
 
   useEffect(() => {
     const delay = 5000; // Delay in milliseconds
@@ -93,14 +94,16 @@ function App() {
     <div className="App font-opensans bg-gray-50 box-border">
       <UserContext.Provider value={data}>
         <Navbar date={date} day={day} />
-        {showComponent &&
+        {showComponent === true ?
           <div className='flex flex-col justify-start'>
             <Headlines data={data} />
-            <BusinessInsider businessData={businessData}/>
+            <BusinessInsider businessData={businessData} />
             <Entertainment />
             <Tech />
             <LifeStyle />
           </div>
+          :
+          <Loading />
         }
 
       </UserContext.Provider>

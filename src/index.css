@@ -26,8 +26,8 @@
   }
 
   .animate__animated .animate__flash {
-    animation-duration: 1.5s;
-    animation-delay: 4s;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
   }
 
   @keyframes rotateText {
