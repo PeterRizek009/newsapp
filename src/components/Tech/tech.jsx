@@ -100,12 +100,12 @@ const Tech = () => {
 
         <div className='md:w-[1600px] md:mx-auto mt-6'>
             <div className='flex justify-stretch items-center'>
-                <h1 className='title md:w-[1200px] border-gradient-red-black'>Tech</h1>
-                <h1 className='hidden md:block text-red-500 text-lg p-2 border-b-2 md:w-[400px] border-gradient-red-black ml-6 uppercase'>Stay Connected</h1>
+                <h1 className='title md:w-[1200px]  border-gradient-red-black'>Tech</h1>
+                <h1 className='hidden md:block text-red-500 text-lg p-2 border-b-2 w-[380px] md:w-[400px] border-gradient-red-black ml-6 uppercase'>Stay Connected</h1>
             </div>
             <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1600px] md:mx-auto md:h-[570px]'>
                 <div className='col-span-1'>
-                    <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[49].urlToImage})` }}>
+                    <div className='relative h-[290px] md:w-full w-[400px] py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[49].urlToImage})` }}>
                     </div>
                     <div className='w-full h-auto flex flex-row flex-wrap'>
                         <div className='w-full flex  justify-start m-2'>

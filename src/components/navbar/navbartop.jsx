@@ -47,7 +47,7 @@ const NavbarTop = ({ day, date, icons }) => {
                     </span>
                 </p>
 
-                <p className='hidden w-[150px] md:flex md:mx-1'>
+                <p className='hidden w-[220px] md:flex md:mx-1'>
                     <span className='px-1  text-orange-500'>
                         <AiOutlineClockCircle size={18} />
                     </span>

@@ -49,7 +49,7 @@ const TabContainer = ({ data }) => {
     const renderTabsContent = () => {
         return (
             (data.slice(headerDatar[toggleTab].start, (headerDatar[toggleTab].start) + 5)).map((item, index) => (
-                <div className='relative h-full flex flex-row items-start justify-start py-5 animated-tabs' key={index}>
+                <div className='relative h-full flex flex-row items-start justify-start py-5' key={index}>
                     <div className='relative block min-w-[85px] min-h-[60px] my-auto px-2 bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }}>
                     </div>
                     <div className='text-xs px-2'>
@@ -66,7 +66,7 @@ const TabContainer = ({ data }) => {
     }
 
     return (
-        <div className='block min-w-[300px]  md:w-full'>
+        <div className='block w-[400px]  md:w-full'>
             <ul className="flex ">
                 {renderHeader()}
             </ul>
