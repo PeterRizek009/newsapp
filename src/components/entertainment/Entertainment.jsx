@@ -81,7 +81,7 @@ const Entertainment = () => {
                     <button type="button" className="mr-2 bg-red-600  p-1 rounded hover:bg-gray-500" onClick={() => index === 0 ? setIndex(slider.length - 1) : setIndex(index - 1)}>
                         <GrPrevious />
                     </button>
-                    <button type="button" className=" bg-red-600  p-1 rounded hover:bg-gray-500" onClick={() => nextSlide()}>
+                    <button type="button" className=" bg-red-600  p-1 rounded hover:bg-gray-500"  onClick={() => nextSlide()}>
                         <GrNext />
                     </button>
                 </div>
@@ -89,7 +89,7 @@ const Entertainment = () => {
 
             <div className='md:w-[1600px] flex flex-col justify-start' >
                 <div className={clicked === true ? `relative max-w-full h-[700px] bg-cover bg-no-repeat bg-center block my-6 inset-0 shadow-md animated-tabs` 
-                : 'relative max-w-full h-[700px] bg-cover bg-no-repeat bg-center block my-6 inset-0 shadow-md'} style={{ backgroundImage: `url(${slider[index].image})` }}>
+                : 'relative max-w-full h-[700px] bg-cover bg-no-repeat bg-center block my-6 inset-0 shadow-md'} onTouchMove={() => nextSlide()} style={{ backgroundImage: `url(${slider[index].image})` }}>
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
                     <div className='absolute bottom-[15%]  flex flex-col items-start  px-8 text-red-500'>
                         <div className='flex justify-between text-sm md:text-lg py-3'>
