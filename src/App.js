@@ -10,6 +10,7 @@ import articles from './data.js';
 import BusinessInsider from './components/Businessinsider/businessinsider';
 import LifeStyle from './components/lifestyle/lifestyle';
 import Loading from './components/loading/loading';
+import Footer from './components/footer/footer';
 
 export const UserContext = createContext()
 
@@ -101,6 +102,7 @@ function App() {
             <Entertainment />
             <Tech />
             <LifeStyle />
+            <Footer/>
           </div>
           :
           <Loading />

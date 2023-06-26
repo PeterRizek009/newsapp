@@ -69,7 +69,7 @@ const LifeStyle = () => {
 
 
 
-                <div className='col-span-1 md:mx-28 mx-auto'>
+                <div className='col-span-1 mx-auto'>
                     <div className='flex flex-col items-center justify-center w-[400px] h-[280px]  bg-neutral-300 font-bold shadow-md'>
                         <h1>Get latest Updates</h1>
                         <input className='w-[220px] h-[40px] my-4 bg-white text-slate-950 text-xs text-center' placeholder='Your email address' ></input>
