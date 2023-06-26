@@ -33,7 +33,7 @@ const LifeStyle = () => {
     const getHead = (a) => {
         return (
             <>
-                <div className='relative h-[290px] w-full  py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
+                <div className='relative h-[290px] md:w-full w-[380px]  py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
                 </div>
                 <div className='w-full h-auto  flex flex-row flex-wrap p-2'>
                     <div className='w-full flex  justify-start '>
