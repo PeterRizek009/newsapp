@@ -61,7 +61,7 @@ const AccordionData = ({ data }) => {
     ];
 
     return (
-        <div className="max-w-md mx-auto mt-5">
+        <div className="max-w-md md:mx-auto mt-5">
             <div className="accordion">
                 {accordionData.map((item, index) => (
                     <AccordionItem key={index} title={item.title} content={item.content} count={item.count} color={item.color}/>
