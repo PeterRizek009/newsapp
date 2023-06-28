@@ -70,7 +70,7 @@ const LifeStyle = () => {
 
 
                 <div className='col-span-1 mx-auto'>
-                    <div className='flex flex-col items-center justify-center w-[400px] h-[280px]  bg-neutral-300 font-bold shadow-md'>
+                    <div className='flex flex-col items-center justify-center w-full h-[280px]  bg-neutral-300 font-bold shadow-md'>
                         <h1>Get latest Updates</h1>
                         <input className='w-[220px] h-[40px] my-4 bg-white text-slate-950 text-xs text-center' placeholder='Your email address' ></input>
                         <button className='w-[220px] h-[40px] bg-red-500 text-white hover:bg-red-900'> Subscribe</button>
