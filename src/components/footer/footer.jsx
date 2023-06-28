@@ -44,7 +44,7 @@ const icons = [
 ]
 const Footer = () => {
     return (
-        <div className='grid grid-rows-2 w-full bottom-0 mt-6'>
+        <footer className='grid grid-rows-2 w-full bottom-0 mt-6'>
             <div className='relative row-span-1 flex flex-row justify-between flex-wrap md:flex-nowrap  w-full mx-auto bg-[#393939]'>
                 {images.map((image) => (
                     <img src={image.url} className='block w-[197px] h-[160px] md:w-full md:h-[340px] bg-center' alt='footerimg' />
@@ -86,7 +86,7 @@ const Footer = () => {
                 </div>
 
             </div>
-        </div>
+        </footer>
     );
 }
 
