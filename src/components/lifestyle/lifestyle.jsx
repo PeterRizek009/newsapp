@@ -33,7 +33,7 @@ const LifeStyle = () => {
     const getHead = (a) => {
         return (
             <>
-                <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
+                <div className='relative h-[290px] md:w-full sm:w-[600px] w-[380px]  py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
                 </div>
                 <div className='w-full h-auto  flex flex-row flex-wrap p-2'>
                     <div className='w-full flex  justify-start '>
@@ -69,8 +69,8 @@ const LifeStyle = () => {
 
 
 
-                <div className='col-span-1 mx-24 md:mx-auto'>
-                    <div className='flex flex-col items-center justify-center w-full h-[280px]  bg-neutral-300 font-bold shadow-md'>
+                <div className='col-span-1  md:mx-auto'>
+                    <div className='flex flex-col items-center justify-center md:w-full h-[280px] w-[380px]  bg-neutral-300 font-bold shadow-md'>
                         <h1>Get latest Updates</h1>
                         <input className='w-[220px] h-[40px] my-4 bg-white text-slate-950 text-xs text-center' placeholder='Your email address' ></input>
                         <button className='w-[220px] h-[40px] bg-red-500 text-white hover:bg-red-900'> Subscribe</button>
