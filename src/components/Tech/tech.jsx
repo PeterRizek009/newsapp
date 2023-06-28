@@ -105,7 +105,7 @@ const Tech = () => {
             </div>
             <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1600px] md:mx-auto md:h-[570px]'>
                 <div className='col-span-1'>
-                    <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[49].urlToImage})` }}>
+                    <div className='relative h-[290px] md:w-full sm:w-[450px] w-[380px]  py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[49].urlToImage})` }}>
                     </div>
                     <div className='w-full h-auto flex flex-row flex-wrap'>
                         <div className='w-full flex  justify-start m-2'>
