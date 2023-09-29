@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        opensans: ['Arial', 'sans-serif']
+        opensans: ['Oswald', 'sans-serif']
 
       },
       grayscale: {
