@@ -18,13 +18,13 @@
 }
 
 .title {
-  @apply text-red-500 text-xl p-2 border-b-2 w-full font-bold;
+  @apply text-red-500 text-xl p-1 border-b-2 w-full;
 }
 @layer utilities {
   .border-gradient-red-black {
-    border-bottom: 2px;
+    border-bottom: 3px;
     border-style: solid;
-    border-image: linear-gradient(to right, red, rgb(114, 110, 110), black) 1;
+    border-image: linear-gradient(to right, red, rgb(114, 110, 110), white) 1;
     border-image-slice: 1;
   }
 
