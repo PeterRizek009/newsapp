@@ -77,7 +77,7 @@ const Tags = [
 ]
 const Footer = () => {
     return (
-        <footer className='relative md:h-[400px] w-full flex flex-column flex-wrap justify-center items-start bottom-0 mt-12 bg-[#393939]'>
+        <footer className='relative md:h-[600px] w-full flex flex-column flex-wrap justify-center items-center bottom-0 mt-12 bg-[#393939]'>
             {/* <div className='relative flex'>
                 {images.map((image) => (
                     <img src={image.url} className='block md:h-auto h-[100px]  bg-center flex-grow' alt='footerimg' />
@@ -88,7 +88,7 @@ const Footer = () => {
             <div className='flex md:flex-row flex-column flex-wrap justify-between items-start w-full bg-[#393939] mx-2'>
 
 
-                <div className='relative md:w-[18%] w-full h-[300px] flex flex-column justify-center items-center flex-wrap mx-auto mt-10 md:mt-0'>
+                <div className='relative md:w-[18%] w-full h-[300px] flex flex-column justify-center items-start flex-wrap mx-auto mt-10 md:mt-0'>
                     <img src={logo} alt='logo' className='w-[180px]' />
 
                     <p className='text-white md:w-full w-[70%] py-1 mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, dolores. </p>
