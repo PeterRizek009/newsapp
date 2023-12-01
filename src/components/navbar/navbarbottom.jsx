@@ -21,7 +21,7 @@ const NavbarBottom = ({icons}) => {
 
     return (
         <>
-            <nav className="flex justify-between md:justify-start items-center  mx-auto  py-2 h-16 w-full md:w-[1600px]  bg-[#393939]">
+            <nav className="flex justify-between md:justify-start items-center  mx-auto  py-2 h-16  w-full  bg-[#393939]">
                 <Link className="navbar-brand ms-5" to={"/"}>
                     <img className='py-2 md:py-0 w-[120px] md:ml-10' src={require("./Logo2.png")} alt='logo' />
                 </Link>

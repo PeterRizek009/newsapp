@@ -33,7 +33,7 @@ const NavbarTop = ({ day, date, icons }) => {
 
 
     return (
-        <div className='fixed w-full md:min-w-[1200px] h-12 md:h-10 md:px-4 z-50 top-0 border-b-1 shadow-md flex flex-row  justify-start md:justify-around items-center text-xs bg-neutral-800 text-white'>
+        <div className='fixed w-full  h-12 md:h-10 md:px-4 z-50 top-0 border-b-1 shadow-md flex flex-row  justify-start md:justify-around items-center text-xs bg-neutral-800 text-white'>
             <div className='md:mx-2 flex justify-between items-center '>
                 <p className='hidden md:flex md:mx-1'>
                     <span className='px-1  text-orange-500'>

@@ -10,9 +10,9 @@ const BusinessInsider = ({ businessData }) => {
 
 
     return (
-        <div className='md:w-[1600px] md:mx-auto'>
+        <div className='md:w-[1400px] md:mx-auto'>
             <h1 className='title border-gradient-red-black'>business insider</h1>
-            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1600px] mx-auto md:h-[570px]'>
+            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1400px] mx-auto md:h-[570px]'>
                 <div className='col-span-1'>
                     <div className='relative h-[290px] w-full py-2 bg-cover bg-center' style={{ backgroundImage: `url(${businessData[9].urlToImage})` }}>
                     </div>

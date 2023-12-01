@@ -31,7 +31,7 @@ const Navbar = ({ date, day }) => {
 
 
     return (
-        <div className='top-0 min-w-full flex flex-col justify-between'>
+        <div className='top-0 w-full flex flex-col justify-between'>
 
             <NavbarTop day={day} date={date} icons={icons}/>
             <NavMiddlle />

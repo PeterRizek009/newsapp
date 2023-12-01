@@ -13,7 +13,7 @@ const AccordionItem = ({ title, content , count ,color}) => {
 
     return (
         <div className="mb-2">
-            <div className="accordion-header w-[380px] flex justify-start md:justify-between items-center py-2 px-1 cursor-pointer" onClick={toggleAccordion}>
+            <div className="accordion-header min-w-[380px] flex justify-start md:justify-between items-center py-2 px-1 cursor-pointer" onClick={toggleAccordion}>
                 <div className='flex justify-start items-center'>
                     <GrNext size={14} />
                     <h4 className="font-semibold mx-2 text-neutral-600">{title}</h4>

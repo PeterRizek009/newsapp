@@ -15,7 +15,7 @@ const LifeStyle = () => {
     const colDats = (a, b) => {
         return (
             (data.slice(a, b)).map((item, index) => (
-                <div className='relative h-[100px]  flex flex-row items-start justify-between' key={index}>
+                <div className='relative h-[100px] sm:w-[350px] flex flex-row items-start justify-between' key={index}>
                     <div className='relative block w-[85px] h-[70px] p-1 bg-cover bg-no-repeat bg-center' style={{ backgroundImage: `url(${item.urlToImage})` }} >
                     </div>
                     <div className='w-full mx-2'>
@@ -33,7 +33,7 @@ const LifeStyle = () => {
     const getHead = (a) => {
         return (
             <>
-                <div className='relative h-[290px] md:w-full sm:w-[600px] w-[380px]  py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
+                <div className='relative h-[290px] md:w-full  sm:w-[350px]  py-2 bg-cover bg-center' style={{ backgroundImage: `url(${data[a].urlToImage})` }}>
                 </div>
                 <div className='w-full h-auto  flex flex-row flex-wrap p-2'>
                     <div className='w-full flex  justify-start '>
@@ -50,9 +50,9 @@ const LifeStyle = () => {
 
 
     return (
-        <div className='md:w-[1600px] md:mx-auto mt-6'>
+        <div className='md:w-[1400px] md:mx-auto mt-6'>
             <h1 className='title md:w-[1200px] w-full border-gradient-red-black '>Life Style</h1>
-            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1600px] md:mx-auto md:h-auto'>
+            <section className='grid md:grid-cols-3 gap-4 py-4 md:w-[1400px] md:mx-auto md:h-auto'>
                 <div className='col-span-1'>
                     {getHead(60)}
                     <div className='flex flex-col  md:my-2 justify-start p-2'>

@@ -73,7 +73,7 @@ const Entertainment = () => {
 
 
     return (
-        <section className='md:w-[1600px] md:mx-auto '>
+        <section className='md:w-[1400px] md:mx-auto '>
 
             <div className='flex justify-between items-start border-gradient-red-black p-2 '>
                 <h1 className='text-red-500 text-2xl w-full '>Entertainment</h1>
@@ -87,7 +87,7 @@ const Entertainment = () => {
                 </div>
             </div>
 
-            <div className='md:w-[1600px] flex flex-col justify-start' >
+            <div className='md:w-[1400px] flex flex-col justify-start' >
                 <div className={clicked === true ? `relative max-w-full h-[700px] bg-cover bg-no-repeat bg-center block my-6 inset-0 shadow-md animated-tabs` 
                 : 'relative max-w-full h-[700px] bg-cover bg-no-repeat bg-center block my-6 inset-0 shadow-md'} onTouchMove={() => nextSlide()} style={{ backgroundImage: `url(${slider[index].image})` }}>
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900"></div>
